@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :products
   resources :editals
-  resources :posts
-
+  resources :posts do
+    resources :comments
+  end
+  
   #troca
   #root 'pages#home'
   root 'posts#index'
