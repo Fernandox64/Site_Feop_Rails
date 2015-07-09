@@ -4,11 +4,14 @@ Rails.application.routes.draw do
   resources :editals
   resources :posts
 
-  root 'pages#home'
+  #troca
+  #root 'pages#home'
+  root 'posts#index'
 
   # get 'editais' => "pages#home", as: :home
-
-  get 'home' => "pages#home", as: :home
+  #troca
+  
+  get 'home' => "posts#index", as: :home
 
   get 'portal_de_compras' => "pages#portal_de_compras", as: :portal_de_compras
 
