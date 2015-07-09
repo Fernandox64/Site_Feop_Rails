@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
   <title>Feop</title>
@@ -6,12 +7,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<%= render 'shared/navbar'%>
 <body>
-	<%= render 'shared/navbar'%>
-	<div class="main-page-content <%= controller_name%>">
-
 		<%= yield %>
-	</div>
-
+	
 </body>
+<%= render 'shared/footer'%>
 </html>
+

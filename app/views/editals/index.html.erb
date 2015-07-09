@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Editals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Descricao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @editals.each do |edital| %>
+      <tr>
+        <td><%= edital.name %></td>
+        <td><%= edital.date %></td>
+        <td><%= edital.descricao %></td>
+        <td><%= link_to 'Show', edital %></td>
+        <td><%= link_to 'Edit', edit_edital_path(edital) %></td>
+        <td><%= link_to 'Destroy', edital, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Edital', new_edital_path %>

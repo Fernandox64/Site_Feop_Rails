@@ -1,6 +1,11 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do 
+
+  resources :products
+  resources :editals
 
   root 'pages#home'
+
+  # get 'editais' => "pages#home", as: :home
 
   get 'home' => "pages#home", as: :home
 
@@ -15,6 +20,44 @@ Rails.application.routes.draw do
   get 'fale_conosco' => "pages#fale_conosco", as: :fale_conosco
   
   get 'galeria_de_projetos' => "pages#galeria_de_projetos", as: :galeria_de_projetos
+  
+
+  get 'acesso_do_pesquisador' => "pages#acesso_do_pesquisador", as: :acesso_do_pesquisador
+
+  get 'fundacao' => "pages#fundacao", as: :fundacao
+
+  get 'eventos' => "pages#eventos", as: :eventos
+
+  get 'portal_de_transparencia' => "pages#portal_de_transparencia", as: :portal_de_transparencia
+
+  get 'publicacoes' => "pages#publicacoes", as: :publicacoes
+
+  get 'setores' => "pages#setores", as: :setores
+
+  get 'conveniar' => "pages#conveniar", as: :conveniar
+
+  get 'juridico' => "pages#juridico", as: :juridico
+
+  get 'editais' => "pages#editais", as: :editais
+
+
+
+  get 'login' => "pages#login", as: :login
+
+  get 'imprensa' => "pages#imprensa", as: :imprensa
+
+  get 'financiar' => "pages#financiar", as: :financiar
+
+  get 'faq' => "pages#faq", as: :faq
+
+  get 'mapa_do_site' => "pages#mapa_do_site", as: :mapa_do_site
+
+  get 'parceiros' => "pages#parceiros", as: :parceiros
+
+  get 'sobre' => "pages#sobre", as: :sobre
+
+  get 'oportunidades' => "pages#oportunidades", as: :oportunidades
+
   
 
   # The priority is based upon order of creation: first created -> highest priority.

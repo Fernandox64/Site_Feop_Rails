@@ -4,21 +4,48 @@
 
     <div id="logo"> 
       <div class="navbar-header">
-        <a class="navbar-brand" href="#" >
+        <a class="navbar-brand" href=<%=  home_path %> >
          <%= image_tag("Logo FEOP_policromia.png", :type => :upload, :width => 200, :height => 100, :crop => :fill) %>
+         
        </a>
      </div>
    </div>
 
+  
   <form class="navbar-form navbar-rigth" role="search" id="search">
-    <div class="form-group">
+    
+    <div class="input-group" id="imput_pesquisa">
+      <input class="form-control" type="text" placeholder="Pesquisar  " />
+      <div class="input-group-btn">
+        <button  type="button" class="btn btn-primary btn-lg" style="font-size: 1px" style="text-shadow: black 5px 3px 3px;">  
+        <span class="glyphicon glyphicon-search"></span>  
+      </button>
+      </div>
+    </div>
+    <!--
+    <div class="form-group " id="imput_pesquisa">
       <input type="text" class="form-control" placeholder="Pesquisar  ">
     </div>
-    <button type="button" class="btn btn-primary btn-lg" style="font-size: 1px" style="text-shadow: black 5px 3px 3px;">  
-      <span class="glyphicon glyphicon-search"></span>  
-    </button> 
-  </form>
+    
+    <div id="bt_pesquisa">
+      <button  type="button" class="btn btn-primary btn-lg" style="font-size: 1px" style="text-shadow: black 5px 3px 3px;">  
+        <span class="glyphicon glyphicon-search"></span>  
+      </button> 
+       --> 
+    </div>
 
+    <!-- Menu colaboradores-->
+    <ul class="nav nav-pills" id="login_area">
+        <li class="<%=  yield(:login) %>"><%= link_to "Login", login_path %></li>
+        <li class="<%=  yield(:imprensa) %>"><%= link_to "Imprensa", imprensa_path %></li>
+        <li class="<%=  yield(:financiar) %>"><%= link_to "Financiar", financiar_path %></li>
+        <li class="<%=  yield(:faq) %>"><%= link_to "FAQ", faq_path %></li>
+        
+    </ul>
+
+  </form>
+  
+     
   <div class="container" id="menuPrincipal">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" id="mobile">
@@ -30,113 +57,48 @@
           <span class="icon-bar"></span>
         </li>  
       </button>
-
     </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav nav-tabs" > 
-        <!--
-        <li class="<%=  yield(:home) %>">  <span class="glyphicon glyphicon-home" ></span> 
-        <%= link_to  "Home", root_path %>
-        </li>
+                
         
-        <li class="<%=  yield(:portal_de_compras) %>">
-          <span class="glyphicon glyphicon-shopping-cart"> </span>
-          <%= link_to "Portal de Compras", portal_de_compras_path %>
-        </li>
-        <li class="<%=  yield(:servicos) %>">
-          <span class="glyphicon glyphicon-wrench" ></span>
-          <%= link_to "Serviços", servicos_path %>
-        </li>
-        <li class="<%=  yield(:projetos) %>">
-          <span class="glyphicon glyphicon-folder-open"></span>
-          <%= link_to "Projetos", projetos_path %>
-          </li>
-        <li class="<%=  yield(:novidades) %>">
-          <span class="glyphicon glyphicon-star" ></span>
-          <%= link_to "Novidades", novidades_path %>
-        </li>
-        <li class="<%=  yield(:fale_conosco) %>">
-          <span class="glyphicon glyphicon-phone-alt"></span>
-          <%= link_to "Fale conosco", fale_conosco_path %>
-        </li>
-        <li class="<%=  yield(:galeria_de_projetos) %>">
-          <span class="glyphicon glyphicon-th-list" ></span>
-          <%= link_to "Galeria de Projetos", galeria_de_projetos_path %>
-        </li>
-        -->
-        
-        <!--  
+
         <li class="dropdown">
-          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Gallery <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Photos</a></li>
-            <li><a href="#">Music</a></li>
-            <li><a href="#">Video</a></li>
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle">A Fundação<b class="caret"></b></a>
+          <ul class="dropdown-menu" id="menu_drop">
+            <li><a href="#">Apoio a UFOP</a></li>
+            <li><a href="#">Missão e Valores</a></li>
+            <li><a href="#">Palavra do presidente</a></li>
+            <li><a href="#">Estatuto</a></li>
+            <li><a href="#">Conselhos</a></li>
             <li class="divider"></li>
-            <li><a href="#">Settings</a></li>
+            <li><a href="#">Emails e Ramais</a></li>
           </ul>
         </li>
-        -->
-            
         
-        <!--<li class="<%=  yield(:home) %>">  
-        <%= link_to  "Home", root_path %></li>-->
+        
+        
         <li class="<%=  yield(:portal_de_compras) %>"><%= link_to "Portal de Compras", portal_de_compras_path %></li>
         <li class="<%=  yield(:servicos) %>"><%= link_to "Serviços", servicos_path %></li>
         <li class="<%=  yield(:projetos) %>"><%= link_to "Projetos", projetos_path %></li>
-        <li class="<%=  yield(:novidades) %>"><%= link_to "Novidades", novidades_path %></li>
-        <li class="<%=  yield(:fale_conosco) %>"><%= link_to "Fale conosco", fale_conosco_path %></li>
+        
         <li class="<%=  yield(:galeria_de_projetos) %>"><%= link_to "Galeria de Projetos", galeria_de_projetos_path %></li>
-          
+        
+        
+        <li class="<%=  yield(:conveniar) %>"><%= link_to "Conveniar", conveniar_path %></li>
+        <li class="<%=  yield(:juridico) %>"><%= link_to "Jurídico", juridico_path %></li>
+        <li class="<%=  yield(:setores) %>"><%= link_to "Setores", setores_path %></li>
+        <li class="<%=  yield(:editais) %>"><%= link_to "Editais", editais_path %></li>
+        <li class="<%=  yield(:eventos) %>"><%= link_to "Eventos", eventos_path %></li>
+        <li class="<%=  yield(:mapa_do_site) %>"><%= link_to "Mapa do Site", mapa_do_site_path %></li>
 
-
-        <!--
-        <ul class="nav nav-pills">
-          <li>
-            <a href="index.html">
-              <span class="glyphicon glyphicon-home"></span> Home
-            </a>
-          </li>
-          <li>
-            <a href="shop.html">
-              <span class="glyphicon glyphicon-shopping-cart"></span> Shop
-            </a>
-          </li>
-          <li>
-            <a href="about.html">
-              <span class="glyphicon glyphicon-info-sign"></span> About
-            </a>
-          </li>
-        </ul>
+        <li class="<%=  yield(:fale_conosco) %>"><%= link_to "Fale conosco", fale_conosco_path %></li>
         
   
 
-        <li class="dropdown">
-          <a href="#" data-toggle="dropdown" class="dropdown-toggle">Gallery <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Photos</a></li>
-            <li><a href="#">Music</a></li>
-            <li><a href="#">Video</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Settings</a></li>
-          </ul>
-        </li>
-          -->
          
-
-        <!--      
-        <button type="submit" class="btn btn-primary">
-          <span class="glyphicon glyphicon-thumbs-up"></span>
-          Confirmar Pedido
-        </button> -->
-
-        <!--
-        <li class="dropdown">
-        <li><a href="root_path" data-toggle="tab" style="font-size: 20px;">
-              <span class="glyphicon glyphicon-eye-open" style="font-size: 20px;"></span>Home</a></li>
-            -->
           </ul>
         </div>
 
@@ -145,41 +107,12 @@
       <!-- /.container -->
 
       <!-- navbar verde --> 
+      
       <nav class="navbar" id="submenu">
         
       </nav>
 
     </nav>
 
-
-
-
-  <!--
-        <div id="wrapper">
-          <div id="content">
-            <span>The footer leaves extra space at the bottom when you scroll all the way down. It starts out at the bottom for only the "Above the Fold" section (before scrolling it's at the bottom).</span>
-          </div>
-          <div id="push"></div>
-        </div>
-        <div id="footer">
-          <a href=""><span>About Us</span></a>
-          <span> | </span>
-          <a href=""><span>Contact Us</span></a>
-          <span> | </span>
-          <a href=""><span>Home</span></a>
-        </div>
-
-
-  <footer>
-    <div class="container" id="footer">
-      <div class="row">
-        <div class="col-sm-12">
-          This is your footer!
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  -->
 
 

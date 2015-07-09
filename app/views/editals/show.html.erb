@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Arquivo:</strong>
+  <%= image_tag @edital.pdf.url(:thumb) %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @edital.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @edital.date %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @edital.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_edital_path(@edital) %> |
+<%= link_to 'Back', editals_path %>

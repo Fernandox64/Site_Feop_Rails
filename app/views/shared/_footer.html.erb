@@ -1,0 +1,43 @@
+ <nav id="navigation">
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" id="footer-body">
+                <ul class="nav nav-tabs">
+                    <li class="<%=  yield(:servicos) %>"><%= link_to "Serviços", servicos_path %></li>
+                    <li class="<%=  yield(:parceiros) %>"><%= link_to "Parceiros", parceiros_path %></li>
+                    <li class="<%=  yield(:sobre) %>"><%= link_to "Sobre", sobre_path %></li>
+                    
+                    <li class="<%=  yield(:mapa_do_site) %>"><%= link_to "Mapa do Site", mapa_do_site_path %></li>
+
+                    <li class="<%=  yield(:fale_conosco) %>"><%= link_to "Fale conosco", fale_conosco_path %></li>
+                    
+                    <p id="endereco">Rua Benedito Valadares, 241 - Bairro Pilar - Ouro Preto MG - Tel/Fax (31) 3559-3450  Cep 35400-000</p>
+                    <p>Copyright &copy; Núcleo de TI FEOP  2015 , Inc. &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
+                    
+                    <div class="container text-center" >
+                        <ul class="social">
+                          <li>
+                            <a href="https://www.facebook.com/fundacaoeducativa" target="_blank">
+                              <%= image_tag("facebook_circle_color.png", :type => :upload, :width => 50, :height => 50, :crop => :fill) %>
+                          </a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/feopnoticias" target="_blank">
+                          <%= image_tag("twitter_circle_color.png", :type => :upload, :width => 50, :height => 50, :crop => :fill) %>
+                      </a>
+                  </li>
+                  <li>
+                    <a href="http://www.flickr.com/photos/" target="_blank">
+                      <%= image_tag("flickr_circle_color.png", :type => :upload, :width => 50, :height => 50, :crop => :fill) %>
+                  </a>
+              </li>
+              <li>
+                <a href="http://www.instagram.com/" target="_blank">
+                  <%= image_tag("instagram_circle_color.png", :type => :upload, :width => 50, :height => 50, :crop => :fill) %>
+              </a>
+          </li>
+      </ul>
+      <p>Copyright &copy; Núcleo de TI FEOP  2015 , Inc. &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
+  </div>
+</ul>
+</div>  
+
+  

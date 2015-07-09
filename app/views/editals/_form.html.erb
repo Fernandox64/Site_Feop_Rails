@@ -1,0 +1,39 @@
+<%= form_for @edital, :html => { :multipart => true } do |f| %>
+  <% if @edital.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@edital.errors.count, "error") %> prohibited this edital from being saved:</h2>
+
+      <ul>
+      <% @edital.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :pdf %><br>
+    <%= f.file_field :pdf %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br>
+    <%= f.text_area :descricao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+
+  
+
+
+<% end %>
