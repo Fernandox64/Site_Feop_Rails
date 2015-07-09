@@ -1,7 +1,7 @@
 	.pages {
 	.about-image{
 		width: 100%;
-		margin-top: 20px;
+		margin-top: 250px;
 	}
 	}
 	.container {
@@ -9,7 +9,7 @@
 	}
 
 	#menuPrincipal {
-		margin-top: 145px;
+		margin-top: 110px;
 		
 		width: 100%;
 		height: 80%;
@@ -60,7 +60,9 @@
 	#logo {
 		background: url('/assets/images/Logo FEOP_policromia.png');
 		position:absolute;
-		top: 13%;
+		//top: 13%;
+		//left:2%;
+		top: 0%;
 		left:2%;
 		background-color: #FFCA08;
 	}
@@ -114,18 +116,6 @@
 
 	}
 
-
-	body {
-		margin-top: 250px;
-		
-		//background-image: image-url('feop_logo.jpeg');
-		background-color: #000000;
-		background-repeat: no-repeat;
-		background-size: 100%;
-		
-
-
-	}
 
 	/* Navbar tab e Navbar pills*/
 	#bs-example-navbar-collapse-1 .collapse navbar-collapse{
@@ -504,3 +494,6 @@
 		float: left;
 	}
 
+	#footer_fixed{
+		
+	}

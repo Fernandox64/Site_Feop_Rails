@@ -38,7 +38,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # gem que ajuda a subir pdf
 # gem "paperclip", "~> 4.2"
+
 # haml
+
 gem 'haml', '~> 4.0.6'
 # 
 gem 'simple_form', '~> 3.1.0'
