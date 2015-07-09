@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :products
   resources :editals
+  resources :posts
 
   root 'pages#home'
 
