@@ -39,6 +39,8 @@ Rails.application.routes.draw do
 
   get 'eventos' => "pages#eventos", as: :eventos
 
+  #get 'eventos' => "http://conveniar.feop.com.br:8081/eventos/", as: :eventos
+
   get 'portal_de_transparencia' => "pages#portal_de_transparencia", as: :portal_de_transparencia
 
   get 'publicacoes' => "pages#publicacoes", as: :publicacoes

@@ -62,7 +62,19 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav nav-tabs" > 
                 
-        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="false">
+            Account <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a tabindex="-1" href="#">My Account</a></li>
+            <li class="divider"></li>
+            <li><a tabindex="-1" href="#">Change Email</a></li>
+            <li><a tabindex="-1" href="#">Change Password</a></li>
+            <li class="divider"></li>
+            <li><a tabindex="-1" href="#">Logout</a></li>
+          </ul>
+        </li>
 
         <li class="dropdown">
           <a href="#" data-toggle="dropdown" class="dropdown-toggle">A Fundação<b class="caret"></b></a>
@@ -90,7 +102,8 @@
         <li class="<%=  yield(:juridico) %>"><%= link_to "Jurídico", juridico_path %></li>
         <li class="<%=  yield(:setores) %>"><%= link_to "Setores", setores_path %></li>
         <li class="<%=  yield(:editais) %>"><%= link_to "Editais", editais_path %></li>
-        <li class="<%=  yield(:eventos) %>"><%= link_to "Eventos", eventos_path %></li>
+        
+        <li><a href="http://conveniar.feop.com.br:8081/eventos/" target=”_blank”>Eventos</a></li>
         <li class="<%=  yield(:mapa_do_site) %>"><%= link_to "Mapa do Site", mapa_do_site_path %></li>
 
         <li class="<%=  yield(:fale_conosco) %>"><%= link_to "Fale conosco", fale_conosco_path %></li>
