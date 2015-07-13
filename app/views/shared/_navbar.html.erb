@@ -80,18 +80,27 @@
       <ul class="nav nav-tabs" > 
 
         <li class="dropdown">
-          <a href="#" data-toggle="dropdown" class="dropdown-toggle">A Fundação<b class="caret"></b></a>
+          <a href="" data-toggle="dropdown" class="dropdown-toggle">A Fundação<b class="caret"></b></a>
           <ul class="dropdown-menu" id="menu_drop">
-            <li><a href="#">Apoio a UFOP</a></li>
+            <li><%= link_to "Apoio a UFOP", apoio_path %> </li>
+            <li><%= link_to "Missão e Valores", missao_path %></li>
+            <li><%= link_to "Palavra do Presidente", presidente_path %></li>
+            <li><%= link_to "Estatuto", estatuto_path %></li>
+            <li><%= link_to "Conselhos", conselhos_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Emails e Ramais", emails_ramais_path %></li>
+          </ul>
+        </li>
+        
+        <!--
+          <li><a href="">Apoio a UFOP</a></li>
             <li><a href="#">Missão e Valores</a></li>
             <li><a href="#">Palavra do presidente</a></li>
             <li><a href="#">Estatuto</a></li>
             <li><a href="#">Conselhos</a></li>
             <li class="divider"></li>
             <li><a href="#">Emails e Ramais</a></li>
-          </ul>
-        </li>
-        
+         -->
         
         
         <li class="<%=  yield(:portal_de_compras) %>"><%= link_to "Portal de Compras", portal_de_compras_path %></li>
@@ -103,7 +112,23 @@
         
         <li class="<%=  yield(:conveniar) %>"><%= link_to "Conveniar", conveniar_path %></li>
         <li class="<%=  yield(:juridico) %>"><%= link_to "Jurídico", juridico_path %></li>
-        <li class="<%=  yield(:setores) %>"><%= link_to "Setores", setores_path %></li>
+        <!--<li class="<%=  yield(:setores) %>"><%= link_to "Setores", setores_path %></li>-->
+
+        <li class="dropdown">
+          <a href="" data-toggle="dropdown" class="dropdown-toggle">Setores<b class="caret"></b></a>
+          <ul class="dropdown-menu" id="menu_drop">
+            <li><%= link_to "Projetos", apoio_path %> </li>
+            <li><%= link_to "Nucleo de TI", missao_path %></li>
+            <li><%= link_to "Suprimentos", presidente_path %></li>
+            <li><%= link_to "Contas", estatuto_path %></li>
+            <li><%= link_to "Financeiro", conselhos_path %></li>
+            <li><%= link_to "RH", conselhos_path %></li>
+            <li><%= link_to "Infraestrutura", conselhos_path %></li>
+            <li><%= link_to "Assessoria Jurídica", conselhos_path %></li>
+          </ul>
+        </li>
+
+
         <li class="<%=  yield(:editais) %>"><%= link_to "Editais", editais_path %></li>
         
         <li><a href="http://conveniar.feop.com.br:8081/eventos/" target=”_blank”>Eventos</a></li>
@@ -129,9 +154,6 @@
       </nav>
 
     </nav>
-
-
-
 
 
 </body>

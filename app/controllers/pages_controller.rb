@@ -1,4 +1,22 @@
 class PagesController < ApplicationController
+  def apoio
+  end
+
+  def missao
+  end
+
+  def presidente
+  end
+
+  def estatuto
+  end
+
+  def conselhos
+  end
+
+  def emails_ramais
+  end
+
   def acesso_do_pesquisador
   end
 

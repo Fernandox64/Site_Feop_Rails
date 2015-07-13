@@ -23,6 +23,6 @@ class Edital < ActiveRecord::Base
                                       "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                                       "application/msword",
                                       "application/vnd.openxmlformats-officedocument.wordprocessingml.document"]},
-                       size: {less_than: 2.megabytes}
+                       size: {less_than: 12.megabytes}
 
 end

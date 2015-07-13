@@ -1,5 +1,7 @@
 Rails.application.routes.draw do 
 
+  
+
   devise_for :users
   resources :products
   resources :editals
@@ -70,8 +72,28 @@ Rails.application.routes.draw do
   get 'sobre' => "pages#sobre", as: :sobre
 
   get 'oportunidades' => "pages#oportunidades", as: :oportunidades
-
   
+  #######
+
+  get 'apoio' => "pages#apoio", as: :apoio
+  get 'missao' => "pages#missao", as: :missao
+  get 'presidente' => "pages#presidente", as: :presidente
+  get 'estatuto' => "pages#estatuto", as: :estatuto
+  get 'conselhos' => "pages#conselhos", as: :conselhos
+  get 'emails_ramais' => "pages#emails_ramais", as: :emails_ramais
+  
+  #get 'pages/apoio'
+
+  #get 'pages/missao'
+
+  #get 'pages/presidente'
+
+  #get 'pages/estatuto'
+
+  #get 'pages/conselhos'
+
+  #get 'pages/emails_ramais'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

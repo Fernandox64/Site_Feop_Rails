@@ -85,5 +85,35 @@ class PagesControllerTest < ActionController::TestCase
     get :oportunidades
     assert_response :success
   end
+  
+  test "should get apoio" do
+    get :apoio
+    assert_response :success
+  end
+
+  test "should get missao" do
+    get :missao
+    assert_response :success
+  end
+
+  test "should get presidente" do
+    get :presidente
+    assert_response :success
+  end
+
+  test "should get estatuto" do
+    get :estatuto
+    assert_response :success
+  end
+
+  test "should get conselhos" do
+    get :conselhos
+    assert_response :success
+  end
+
+  test "should get emails_ramais" do
+    get :emails_ramais
+    assert_response :success
+  end
 
 end
