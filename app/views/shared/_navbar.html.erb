@@ -13,7 +13,6 @@
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </head>
 
-<body>
 
 
   <!-- Navigation -->
@@ -55,6 +54,7 @@
         <li class="<%=  yield(:login) %>"><%= link_to "Login", login_path %></li>
         <li class="<%=  yield(:imprensa) %>"><%= link_to "Imprensa", imprensa_path %></li>
         <li class="<%=  yield(:financiar) %>"><%= link_to "Financiar", financiar_path %></li>
+        <li><%= link_to "Acesso do pesquisador", "http://conveniar.feop.com.br:8081/Pesquisador/Login.aspx?ReturnUrl=%2fpesquisador%2f", target: '_blank' %> </li>
         <li class="<%=  yield(:faq) %>"><%= link_to "FAQ", faq_path %></li>
         
     </ul>
@@ -156,5 +156,4 @@
     </nav>
 
 
-</body>
-</html>
+
