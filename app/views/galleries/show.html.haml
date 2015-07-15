@@ -1,0 +1,8 @@
+%h1= @gallery.title
+%p= @gallery.link
+%p= @gallery.description
+
+
+= link_to "Galeria de Projetos", galeria_de_projetos_path
+= link_to "Editar Projeto", galeria_de_projetos_path(@gallery)
+= link_to "Deletar", galeria_de_projetos_path(@gallery), method: :delete, data: {confirm: "Tem certeza desta Ação?"}

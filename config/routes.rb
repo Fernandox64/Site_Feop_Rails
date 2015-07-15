@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :posts_galeria do
+  resources :galleries do
     member do
       get "like", to: "posts#upvote"
       get "dislike", to: "posts#downvote"
@@ -40,7 +40,7 @@ Rails.application.routes.draw do
 
   get 'fale_conosco' => "pages#fale_conosco", as: :fale_conosco
   
-  get 'galeria_de_projetos' => "posts_galeria#index", as: :galeria_de_projetos
+  get 'galeria_de_projetos' => "galleries#index", as: :galeria_de_projetos
   
 
   get 'acesso_do_pesquisador' => "pages#acesso_do_pesquisador", as: :acesso_do_pesquisador

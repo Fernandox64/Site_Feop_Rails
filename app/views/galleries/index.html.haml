@@ -1,0 +1,19 @@
+- @galleries.each do |gallery|
+  %h2= link_to gallery.title, gallery
+
+- if user_signed_in?
+  %p#intro
+    = current_user.name
+    %br/
+    %span
+      Galeria de projetos
+- else
+  %p#intro
+    Bem vindo
+    %br/
+    %span
+      Galeria de projetos      
+.container-fluid
+
+
+= link_to "Adicionar novo Projeto", new_gallery_path(@gallery)
