@@ -1,31 +1,51 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Lista de Editais</h1>
-
-<table>
+<%- model_class = Edital -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Data</th>
-      <th>Descriçao</th>
-      <th colspan="6"></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:date) %></th>
+      <th><%= model_class.human_attribute_name(:descricao) %></th>
+      <th><%= model_class.human_attribute_name(:pdf_file_name) %></th>
+      <th><%= model_class.human_attribute_name(:pdf_content_type) %></th>
+      <th><%= model_class.human_attribute_name(:pdf_file_size) %></th>
+      <th><%= model_class.human_attribute_name(:pdf_updated_at) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @editals.each do |edital| %>
       <tr>
+        <td><%= link_to edital.id, edital_path(edital) %></td>
         <td><%= edital.name %></td>
         <td><%= edital.date %></td>
         <td><%= edital.descricao %></td>
-        <td><%= link_to 'Mostrar', edital %></td>
-        <td><%= link_to 'Editar', edit_edital_path(edital) %></td>
-        <td><%= link_to 'Deletar', edital, method: :delete, data: { confirm: 'Você esta certo disso?' } %></td>
+        <td><%= edital.pdf_file_name %></td>
+        <td><%= edital.pdf_content_type %></td>
+        <td><%= edital.pdf_file_size %></td>
+        <td><%= edital.pdf_updated_at %></td>
+        <td><%=l edital.created_at %></td>
+        <td>
+
+          
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_edital_path(edital), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      edital_path(edital),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'Novo Edital', new_edital_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_edital_path,
+            :class => 'btn btn-primary' %>

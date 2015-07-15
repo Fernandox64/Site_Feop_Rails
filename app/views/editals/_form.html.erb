@@ -1,3 +1,29 @@
+<%= simple_form_for @edital, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="field">
+    <%= f.label :pdf %><br>
+    <%= f.file_field :pdf %>
+  </div>
+  <%= f.input :name %>
+  <%= error_span(@edital[:name]) %>
+  
+  <%= f.input :date %>
+  <%= error_span(@edital[:date]) %>
+  
+  <%= f.input :descricao %>
+  <%= error_span(@edital[:descricao]) %>
+  
+  
+  <%= f.input :pdf_updated_at %>
+  <%= error_span(@edital[:pdf_updated_at]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                editals_path, :class => 'btn btn-default' %>
+
+  
+<% end %>
+
+<!--
 <%= form_for @edital, :html => { :multipart => true } do |f| %>
   <% if @edital.errors.any? %>
     <div id="error_explanation">
@@ -37,3 +63,5 @@
 
 
 <% end %>
+
+-->

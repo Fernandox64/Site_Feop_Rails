@@ -14,14 +14,14 @@ class PostsGaleriaController < ApplicationController
 	end
 
 	def new
-	  @post_galeria = current_user.Posts_Galeria.build
+	  @postgalerium = current_user.post_galeria.build
 	end
 
 	def create
-		@posts_galerium = current_user.Posts_Galeria.build(post_params)
+		@post_galerium = current_user.post_galeria.build(posts_galerium_params)
 
-		if @posts_galerium.save
-			redirect_to @posts_galerium
+		if @post_galerium.save
+			redirect_to @post_galerium
 		else
 			render 'new'	
 		end
@@ -31,7 +31,7 @@ class PostsGaleriaController < ApplicationController
 	end
 
 	def update
-		if @posts_galerium.update(posts_galerium_params)
+		if @post_galerium.update(post_galerium_params)
 			redirect_to @posts_galerium
 		else
 			render 'edit'
@@ -40,23 +40,23 @@ class PostsGaleriaController < ApplicationController
 	end
 
 	def destroy
-		@posts_galerium.destroy
+		@post_galerium.destroy
 		redirect_to galeria_de_projetos_path
 	end
 
 	def upvote
-		@posts_galerium.upvote_by current_user
+		@post_galerium.upvote_by current_user
 		redirect_to :back
 	end
 
 	def downvote
-		@posts_galerium.downvote_by current_user
+		@post_galerium.downvote_by current_user
 		redirect_to :back
 	end
 	private 
 
 	def find_post
-		@posts_galerium = Posts_galeria.find(params[:id])
+		@post_galerium = Posts_Galeria.find(params[:id])
 	end
 
 	def post_params

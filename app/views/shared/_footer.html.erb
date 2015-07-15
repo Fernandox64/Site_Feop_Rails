@@ -40,15 +40,16 @@
         <h3>FEOP<span>Fundação educativa Ouro Preto</span></h3>
 
         <a href="https://www.facebook.com/fundacaoeducativa" target="_blank">
-                              <%= image_tag("Logo FEOP_policromia.png", :type => :upload, :width => 300, :height => 150, :crop => :fill) %>
+                              <%= image_tag("Logo FEOP_policromia.png", :type => :upload, :width => 200, :height => 100, :crop => :fill) %>
         </a>
 
         <p class="footer-links">
           
           <a class="<%=  yield(:home) %>"><%= link_to "Home", root_path %></a>
           ·
+          <!--
           <a class="<%=  yield(:servicos) %>"><%= link_to "Serviços", servicos_path %></a>
-          ·
+          ·-->
           <a class="<%=  yield(:parceiros) %>"><%= link_to "Parceiros", parceiros_path %></a>
           ·
           <a class="<%=  yield(:sobre) %>"><%= link_to "Sobre", sobre_path %></a>

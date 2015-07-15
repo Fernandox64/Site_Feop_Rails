@@ -28,7 +28,7 @@ class EditalsController < ApplicationController
 
     respond_to do |format|
       if @edital.save
-        format.html { redirect_to @edital, notice: 'Edital was successfully created.' }
+        format.html { redirect_to @edital, notice: 'Edital criado com sucesso.' }
         format.json { render :show, status: :created, location: @edital }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class EditalsController < ApplicationController
   def update
     respond_to do |format|
       if @edital.update(edital_params)
-        format.html { redirect_to @edital, notice: 'Edital was successfully updated.' }
+        format.html { redirect_to @edital, notice: 'Edital atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @edital }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class EditalsController < ApplicationController
   def destroy
     @edital.destroy
     respond_to do |format|
-      format.html { redirect_to editals_url, notice: 'Edital was successfully destroyed.' }
+      format.html { redirect_to editals_url, notice: 'Edital deletado com sucesso.' }
       format.json { head :no_content }
     end
   end
