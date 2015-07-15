@@ -19,13 +19,13 @@
                 = pluralize(@post.get_downvotes.size, "Dislike")
             %p.data
                 %i.fa.fa-comments-o
-                = pluralize(@post.comments.count, "Comentários")
+                = pluralize(@post.comments.count, "Comment")
             - if @post.user == current_user
                 = link_to "Editar", edit_post_path(@post), class: "data"
                 = link_to "Deletar", post_path(@post), method: :delete, data: { confirm: "Tem certeza desta Ação?" }
 
 #comments
-    %h2.comment_count= pluralize(@post.comments.count, "Comment")
+    %h2.comment_count= pluralize(@post.comments.count, "Comentários")
     - @comments.each do |comment|
         .comment
             %p.username= comment.user.name

@@ -1,0 +1,2 @@
+module PostsGaleriaHelper
+end

@@ -12,6 +12,14 @@ Rails.application.routes.draw do
     end  
     resources :comments
   end
+
+  resources :posts_galeria do
+    member do
+      get "like", to: "posts#upvote"
+      get "dislike", to: "posts#downvote"
+    end  
+    resources :comments
+  end
   
   #troca
   #root 'pages#home'
@@ -32,7 +40,7 @@ Rails.application.routes.draw do
 
   get 'fale_conosco' => "pages#fale_conosco", as: :fale_conosco
   
-  get 'galeria_de_projetos' => "pages#galeria_de_projetos", as: :galeria_de_projetos
+  get 'galeria_de_projetos' => "posts_galeria#index", as: :galeria_de_projetos
   
 
   get 'acesso_do_pesquisador' => "pages#acesso_do_pesquisador", as: :acesso_do_pesquisador
@@ -53,7 +61,7 @@ Rails.application.routes.draw do
 
   get 'juridico' => "pages#juridico", as: :juridico
 
-  get 'editais' => "pages#editais", as: :editais
+  get 'editais' => "editals#index", as: :editais
 
 
 
