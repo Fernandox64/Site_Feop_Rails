@@ -1,20 +1,31 @@
-= image_tag @gallery.image.url(:medium)
-%h1= @gallery.title
-%p= @gallery.link
-%p= @gallery.description
-%p= @gallery.user.name
-%p
-  = @gallery.get_upvotes.size
-  Likes
-%p
-  = @gallery.get_downvotes.size
-  Dislikes
+#post_show
+  %h1= @gallery.title
+  %p.username
+    Compartilhado por
+    = @gallery.user.name
+    Sobre
+    = time_ago_in_words(@gallery.created_at)
+  .clearfix
+    .post_image_description
+      = image_tag @gallery.image.url(:medium)
+      .description= simple_format(@gallery.description)
+    .post_data
+      = link_to "Link Visitado", @gallery.link, class: "button"
+      = link_to like_gallery_path(@gallery), method: :get, class: "data" do
+        %i.fa.fa-thumbs-o-up
+        = pluralize(@gallery.get_upvotes.size, "Like")
+      = link_to dislike_gallery_path(@gallery), method: :get, class: "data" do
+        %i.fa.fa-thumbs-o-down
+        = pluralize(@gallery.get_downvotes.size, "Dislike")
+      %p.data
+        %i.fa.fa-comments-o
+        = pluralize(@gallery.comentarios.count, "Comentários")
+      - if @gallery.user == current_user
+        = link_to "Editar", edit_gallery_path(@gallery), class: "data"
+        = link_to "Deletar", gallery_path(@gallery), method: :delete, data: { confirm: "Tem certeza desta Ação?" }
 
-= link_to "Like", like_gallery_path(@gallery), method: :get
-= link_to "Dislike", dislike_gallery_path(@gallery), method: :get
 
-
-#comentarios
+#comments
   %h2.comentario_count= pluralize(@gallery.comentarios.count, "Comentários")
   - @comentarios.each do |comentario|
     .comentario
@@ -23,6 +34,6 @@
   = render 'comentarios/form'
 
 
-= link_to "Galeria de Projetos", galeria_de_projetos_path
-= link_to "Editar Projeto", edit_gallery_path(@gallery)
-= link_to "Deletar", gallery_path(@gallery), method: :delete, data: {confirm: "Tem certeza desta Ação?"}
+= link_to "Galeria de Projetos", galeria_de_projetos_path, class: "button"
+= link_to "Editar Projeto", edit_gallery_path(@gallery), class: "button"
+= link_to "Deletar", gallery_path(@gallery), class: "button" , method: :delete, data: {confirm: "Tem certeza desta Ação?"}
