@@ -1,8 +1,9 @@
 %h1= @gallery.title
 %p= @gallery.link
 %p= @gallery.description
+//%p= @gallery.user.name
 
 
 = link_to "Galeria de Projetos", galeria_de_projetos_path
-= link_to "Editar Projeto", galeria_de_projetos_path(@gallery)
-= link_to "Deletar", galeria_de_projetos_path(@gallery), method: :delete, data: {confirm: "Tem certeza desta Ação?"}
+= link_to "Editar Projeto", edit_gallery_path(@gallery)
+= link_to "Deletar", gallery_path(@gallery), method: :delete, data: {confirm: "Tem certeza desta Ação?"}
