@@ -1,6 +1,9 @@
 - @galleries.each do |gallery|
   = link_to (image_tag gallery.image.url(:small))
   %h2= link_to gallery.title, gallery
+  %p
+    = gallery.comentarios.count
+    Comentários
 
 - if user_signed_in?
   %p#intro

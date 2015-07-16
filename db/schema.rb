@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150716190516) do
+ActiveRecord::Schema.define(version: 20150716193156) do
+
+  create_table "comentarios", force: :cascade do |t|
+    t.text     "content",    limit: 65535
+    t.integer  "gallery_id", limit: 4
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "comentarios", ["gallery_id"], name: "index_comentarios_on_gallery_id", using: :btree
+  add_index "comentarios", ["user_id"], name: "index_comentarios_on_user_id", using: :btree
 
   create_table "comments", force: :cascade do |t|
     t.text     "content",    limit: 65535
@@ -115,6 +126,8 @@ ActiveRecord::Schema.define(version: 20150716190516) do
   add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
   add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
 
+  add_foreign_key "comentarios", "galleries"
+  add_foreign_key "comentarios", "users"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
 end

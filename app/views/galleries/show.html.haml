@@ -4,6 +4,14 @@
 %p= @gallery.description
 %p= @gallery.user.name
 
+#comments
+    %h2.comentario_count= pluralize(@gallery.comentarios.count, "Comentários")
+    - @comentarios.each do |comentario|
+        .comentario
+            %p.username= comentario.user.name
+            %p.content= comentario.content
+    = render 'comentarios/form'
+
 
 = link_to "Galeria de Projetos", galeria_de_projetos_path
 = link_to "Editar Projeto", edit_gallery_path(@gallery)

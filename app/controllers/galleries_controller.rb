@@ -9,7 +9,7 @@ class GalleriesController < ApplicationController
 
 	def show
 		#@comments = Comment.where(post_id: @post)
-		
+		@comentarios = Comentario.where(gallery_id: @gallery)
 	end
 
 	def new
