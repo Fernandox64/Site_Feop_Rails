@@ -13,13 +13,13 @@ class GalleriesController < ApplicationController
 	end
 
 	def new
-	  #@gallery = current_user.galleries.build
-	  @gallery = Gallery.new
+	  @gallery = current_user.galleries.build
+	  #@gallery = Gallery.new
 	end
 
 	def create
-		@gallery = Gallery.new(gallery_params)
-		#@gallery = current_user.galleries.build(gallery_params)
+		#@gallery = Gallery.new(gallery_params)
+		@gallery = current_user.galleries.build(gallery_params)
 		
 		if @gallery.save
 			redirect_to @gallery
