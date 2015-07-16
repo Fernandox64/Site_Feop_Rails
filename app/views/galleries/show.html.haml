@@ -1,7 +1,8 @@
+= image_tag @gallery.image.url(:medium)
 %h1= @gallery.title
 %p= @gallery.link
 %p= @gallery.description
-//%p= @gallery.user.name
+%p= @gallery.user.name
 
 
 = link_to "Galeria de Projetos", galeria_de_projetos_path
