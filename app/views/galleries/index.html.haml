@@ -4,6 +4,9 @@
   %p
     = gallery.comentarios.count
     Comentários
+  %p
+    = gallery.get_likes.size
+    Likes
 
 - if user_signed_in?
   %p#intro

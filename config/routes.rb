@@ -15,8 +15,8 @@ Rails.application.routes.draw do
 
   resources :galleries do
     member do
-      get "like", to: "posts#upvote"
-      get "dislike", to: "posts#downvote"
+      get "like", to: "galleries#upvote"
+      get "dislike", to: "galleries#downvote"
     end  
     resources :comentarios
   end

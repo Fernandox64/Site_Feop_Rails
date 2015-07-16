@@ -3,14 +3,24 @@
 %p= @gallery.link
 %p= @gallery.description
 %p= @gallery.user.name
+%p
+  = @gallery.get_upvotes.size
+  Likes
+%p
+  = @gallery.get_downvotes.size
+  Dislikes
 
-#comments
-    %h2.comentario_count= pluralize(@gallery.comentarios.count, "Comentários")
-    - @comentarios.each do |comentario|
-        .comentario
-            %p.username= comentario.user.name
-            %p.content= comentario.content
-    = render 'comentarios/form'
+= link_to "Like", like_gallery_path(@gallery), method: :get
+= link_to "Dislike", dislike_gallery_path(@gallery), method: :get
+
+
+#comentarios
+  %h2.comentario_count= pluralize(@gallery.comentarios.count, "Comentários")
+  - @comentarios.each do |comentario|
+    .comentario
+      %p.username= comentario.user.name
+      %p.content= comentario.content
+  = render 'comentarios/form'
 
 
 = link_to "Galeria de Projetos", galeria_de_projetos_path
