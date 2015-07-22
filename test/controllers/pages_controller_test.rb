@@ -1,6 +1,41 @@
 require 'test_helper'
 
 class PagesControllerTest < ActionController::TestCase
+  test "should get nucleo_Ti" do
+    get :nucleo_Ti
+    assert_response :success
+  end
+
+  test "should get suprimentos" do
+    get :suprimentos
+    assert_response :success
+  end
+
+  test "should get contas" do
+    get :contas
+    assert_response :success
+  end
+
+  test "should get financeiro" do
+    get :financeiro
+    assert_response :success
+  end
+
+  test "should get rh" do
+    get :rh
+    assert_response :success
+  end
+
+  test "should get infraestrutura" do
+    get :infraestrutura
+    assert_response :success
+  end
+
+  test "should get acessoria" do
+    get :acessoria
+    assert_response :success
+  end
+
   test "should get acesso_do_pesquisador" do
     get :acesso_do_pesquisador
     assert_response :success
@@ -115,5 +150,5 @@ class PagesControllerTest < ActionController::TestCase
     get :emails_ramais
     assert_response :success
   end
-
+  
 end

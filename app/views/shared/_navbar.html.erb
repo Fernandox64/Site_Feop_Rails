@@ -6,7 +6,7 @@
 <meta name="generator" content="HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Bootstrap Menu Sample</title>
+<title>Rodapé</title>
 
 <link rel="stylesheet" href="bootstrap.min.css">
 <script src="http://codeorigin.jquery.com/jquery-1.10.2.js"></script>
@@ -20,7 +20,7 @@
 
     <div id="logo"> 
       <div class="navbar-header">
-        <a class="navbar-brand" href=<%=  home_path %> >
+        <a class="navbar-brand" id="nav_logo"  href=<%=  home_path %> >
          <%= image_tag("Logo FEOP_policromia.png", :type => :upload, :width => 200, :height => 100, :crop => :fill) %>       
        </a>
      </div>
@@ -31,10 +31,21 @@
     
     <div class="input-group" id="imput_pesquisa">
       <input class="form-control" type="text" placeholder="Pesquisar  " />
+      
+      
+
       <div class="input-group-btn">
-        <button  type="button" class="btn btn-primary btn-lg" style="font-size: 1px" style="text-shadow: black 5px 3px 3px;">  
+        
+        <!--
+        <button  type="button" class="btn btn-primary btn-lg" style="font-size: 1px" style="text-shadow: black 5px 3px 3px;">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"> </span>
+        
         <span class="glyphicon glyphicon-search"></span>  
-      </button>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search</button>
+
+        </button>
+        -->
+      
       </div>
     </div>
     <!--
@@ -51,6 +62,7 @@
 
     <!-- Menu colaboradores-->
     <ul class="nav nav-pills" id="login_area">
+
         <li class="<%=  yield(:login) %>"><%= link_to "Login", login_path %></li>
         <li class="<%=  yield(:imprensa) %>"><%= link_to "Imprensa", imprensa_path %></li>
         <li class="<%=  yield(:financiar) %>"><%= link_to "Financiar", financiar_path %></li>
@@ -107,7 +119,7 @@
         
         <!--<li class="<%=  yield(:portal_de_compras) %>"><%= link_to "Portal de Compras", portal_de_compras_path %></li>-->
         <li><a href="http://conveniar.feop.com.br:8081/Fornecedor/Login.aspx?ReturnUrl=%2ffornecedor%2f" target=”_blank”>Portal de Compras</a></li>
-        <li class="<%=  yield(:servicos) %>"><%= link_to "Serviços", servicos_path %></li>
+        <!--<li class="<%=  yield(:servicos) %>"><%= link_to "Serviços", servicos_path %></li>-->
         <li class="<%=  yield(:projetos) %>"><%= link_to "Projetos", projetos_path %></li>
         
         <li class="<%=  yield(:galeria_de_projetos) %>"><%= link_to "Galeria de Projetos", galeria_de_projetos_path %></li>
@@ -120,14 +132,14 @@
         <li class="dropdown">
           <a href="" data-toggle="dropdown" class="dropdown-toggle">Setores<b class="caret"></b></a>
           <ul class="dropdown-menu" id="menu_drop">
-            <li><%= link_to "Projetos", apoio_path %> </li>
-            <li><%= link_to "Nucleo de TI", missao_path %></li>
-            <li><%= link_to "Suprimentos", presidente_path %></li>
-            <li><%= link_to "Contas", estatuto_path %></li>
-            <li><%= link_to "Financeiro", conselhos_path %></li>
-            <li><%= link_to "RH", conselhos_path %></li>
-            <li><%= link_to "Infraestrutura", conselhos_path %></li>
-            <li><%= link_to "Assessoria Jurídica", conselhos_path %></li>
+            <li><%= link_to "Projetos", projetos_path %> </li>
+            <li><%= link_to "Nucleo de TI", nucleo_Ti_path %></li>
+            <li><%= link_to "Suprimentos", suprimentos_path %></li>
+            <li><%= link_to "Contas", contas_path %></li>
+            <li><%= link_to "Financeiro", financeiro_path %></li>
+            <li><%= link_to "RH", rh_path %></li>
+            <li><%= link_to "Infraestrutura", infraestrutura_path %></li>
+            <li><%= link_to "Assessoria Jurídica", acessoria_path %></li>
           </ul>
         </li>
 
@@ -149,12 +161,14 @@
       </div>
       <!-- /.container -->
 
-      <!-- navbar verde --> 
+      <!-- navbar verde 
       
 
       <nav class="navbar" id="submenu">
         
       </nav>
+
+      --> 
 
     </nav>
 

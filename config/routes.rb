@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   
 
+ 
+
   devise_for :users
   resources :products
   resources :editals
@@ -90,6 +92,23 @@ Rails.application.routes.draw do
   get 'conselhos' => "pages#conselhos", as: :conselhos
   get 'emails_ramais' => "pages#emails_ramais", as: :emails_ramais
   
+
+  get 'nucleo_Ti' => "pages#nucleo_Ti", as: :nucleo_Ti
+
+  get 'suprimentos' => "pages#suprimentos", as: :suprimentos
+
+  get 'contas' => "pages#contas", as: :contas
+
+  get 'financeiro' => "pages#financeiro", as: :financeiro
+
+  get 'rh' => "pages#rh", as: :rh
+
+  get 'infraestrutura' => "pages#infraestrutura", as: :infraestrutura
+
+  get 'acessoria' => "pages#acessoria", as: :acessoria
+
+
+
   #get 'pages/apoio'
 
   #get 'pages/missao'

@@ -1,4 +1,25 @@
 class PagesController < ApplicationController
+  def nucleo_Ti
+  end
+
+  def suprimentos
+  end
+
+  def contas
+  end
+
+  def financeiro
+  end
+
+  def rh
+  end
+
+  def infraestrutura
+  end
+
+  def acessoria
+  end
+
   def apoio
   end
 
@@ -67,4 +88,6 @@ class PagesController < ApplicationController
 
   def oportunidades
   end
+
+  
 end
