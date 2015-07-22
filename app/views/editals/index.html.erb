@@ -1,6 +1,7 @@
 <%- model_class = Edital -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1>Editais</h1>
+  
 </div>
 <table class="table table-striped">
   <thead>
@@ -9,11 +10,6 @@
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:date) %></th>
       <th><%= model_class.human_attribute_name(:descricao) %></th>
-      <th><%= model_class.human_attribute_name(:pdf_file_name) %></th>
-      <th><%= model_class.human_attribute_name(:pdf_content_type) %></th>
-      <th><%= model_class.human_attribute_name(:pdf_file_size) %></th>
-      <th><%= model_class.human_attribute_name(:pdf_updated_at) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -24,11 +20,8 @@
         <td><%= edital.name %></td>
         <td><%= edital.date %></td>
         <td><%= edital.descricao %></td>
-        <td><%= edital.pdf_file_name %></td>
-        <td><%= edital.pdf_content_type %></td>
-        <td><%= edital.pdf_file_size %></td>
-        <td><%= edital.pdf_updated_at %></td>
-        <td><%=l edital.created_at %></td>
+        <td><%= link_to "Download", edital.pdf.url(:original, false), class: "button" %></td>
+        
         <td>
 
           

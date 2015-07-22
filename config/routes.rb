@@ -1,9 +1,5 @@
 Rails.application.routes.draw do 
 
-  
-
- 
-
   devise_for :users
   resources :products
   resources :editals
@@ -31,6 +27,8 @@ Rails.application.routes.draw do
   #troca
   
   get 'home' => "posts#index", as: :home
+  
+  #get 'home' => "pages#home", as: :home
 
   get 'portal_de_compras' => "pages#portal_de_compras", as: :portal_de_compras
 

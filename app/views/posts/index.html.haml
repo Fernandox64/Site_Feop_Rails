@@ -6,7 +6,7 @@
       Notícias
 - else
   %p#intro
-    Bem vindo
+    //Bem vindo
     %br/
     %span
       Notícias      
@@ -21,8 +21,7 @@
             %h2= link_to post.title, post
           .data.clearfix
             %p.username
-              Shared by
-              
+              FEOP
             %p.buttons
               %span
                 %i.fa.fa-comments-o
@@ -30,3 +29,4 @@
               %span
                 %i.fa.fa-thumbs-o-up
                 = post.get_likes.size
+

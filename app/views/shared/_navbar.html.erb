@@ -92,7 +92,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav nav-tabs" > 
-
+        <li class="<%=  yield(:fundacao) %>"><%= link_to "A Fundação", fundacao_path %></li>
+        
+        <!--
         <li class="dropdown">
           <a href="" data-toggle="dropdown" class="dropdown-toggle">A Fundação<b class="caret"></b></a>
           <ul class="dropdown-menu" id="menu_drop">
@@ -105,7 +107,8 @@
             <li><%= link_to "Emails e Ramais", emails_ramais_path %></li>
           </ul>
         </li>
-        
+        -->
+
         <!--
           <li><a href="">Apoio a UFOP</a></li>
             <li><a href="#">Missão e Valores</a></li>
@@ -127,8 +130,9 @@
         
         <li class="<%=  yield(:conveniar) %>"><%= link_to "Conveniar", conveniar_path %></li>
         <li class="<%=  yield(:juridico) %>"><%= link_to "Jurídico", juridico_path %></li>
-        <!--<li class="<%=  yield(:setores) %>"><%= link_to "Setores", setores_path %></li>-->
-
+        <li class="<%=  yield(:setores) %>"><%= link_to "Setores", setores_path %></li>
+        
+        <!--
         <li class="dropdown">
           <a href="" data-toggle="dropdown" class="dropdown-toggle">Setores<b class="caret"></b></a>
           <ul class="dropdown-menu" id="menu_drop">
@@ -142,7 +146,7 @@
             <li><%= link_to "Assessoria Jurídica", acessoria_path %></li>
           </ul>
         </li>
-
+        -->
 
         <li class="<%=  yield(:editais) %>"><%= link_to "Editais", editais_path %></li>
         
