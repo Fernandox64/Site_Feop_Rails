@@ -11,12 +11,15 @@
 
 
 body {
+    
+    
+
     background-color: #FFFFFF;
     //background-image: image-url('bg_feop_site.jpg');
     //background-repeat: repeat;
-    background-size: 9%;
+    //background-size: 9%;
     font-family: "Proxima Nova";
-    font-weight: 100;
+    //font-weight: 100;
     padding: 10px;
     padding-bottom: 60px;
     /* Height of the footer */
@@ -75,7 +78,7 @@ header {
 }
 
 .button {
-	border: 1px solid #000000;
+	border: 1px solid #009688;
 	padding: .7rem 1.25rem;
 	border-radius: .3rem;
 	outline: none;

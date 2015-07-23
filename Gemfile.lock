@@ -207,6 +207,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts_as_votable (~> 0.10.0)
+  autoprefixer-rails
   bootstrap-sass
   carrierwave
   coffee-rails (~> 4.1.0)

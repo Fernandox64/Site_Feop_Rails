@@ -18,45 +18,45 @@
     html,
     body {
         height: 100%;
+        //font-size:100%;
     }
+
+
     
     #menuPrincipal {
         margin-top: 120px;
+        border: 1px solid #009688;
         width: 100%;
         height: 80%;
         text-align: center;
         //width: 1680px;
-        height: 45px;
+        //height: 45px;
         background-color: #009688;
         font-family: "Proxima Nova";
         color: #FFFFFF;
 
     }
     
-    #submenu {
-        background-color: #a5d6a7;
-        width: 100%;
-        height: 13px;
-        
-    }
-    
     #login_area {
         //background-color: #FFCA08;
         //background-color: #3A8477;
         width: 100%;
-        text-align: right;
         height: 0px;
-        background-color: #009688;
+        text-align: right;
+        background-color: #4DB6AC;
+        top: 0%;
+        clear: right;
     }
     
     #logo {
         background: url('/assets/images/Logo FEOP_policromia.png');
-        position: absolute;
+        
         //top: 13%;
         //left:2%;
-        top: 0%;
-        left: 2%;
+        //top: 0%;
+        //left: 2%;
         background-color: #009688;
+        clear: left;
     }
     
     
@@ -85,18 +85,17 @@
     #menu_login {
         position: absolute;
         right: 10px;
+        top: 0%;
+        top: 0px;
     }
     
-    #login_area {
-        background-image: linear-gradient(to top, #205249, #1a463d 17%, #205249 21%, #468C7D);
-    }
     
     .navbar {
         //background-color: #FFCA08;
         background-color: #26a69a;
         background-color: #26a69a;
         position: absolute;
-
+        border: 1px solid #009688;
     }
 
     #nav_logo{
@@ -111,16 +110,13 @@
         right: 10px;
     }
     
-    .navbar-tabs {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    }
+    
     
     .nav-tabs > li,
     .nav-pills > li {
         float: none;
         display: inline-block;
-        *display: inline;
+        //border: 1px solid #009688;
         /* ie7 fix */
         
         zoom: 1;
@@ -130,6 +126,7 @@
     .nav-pills > li.active > a:hover {
         color: black;
         background-color: #ffee58;
+
     }
     
     div#menu {
@@ -138,81 +135,13 @@
     
     #listamenu {}
     
-    .glyphicon {
-        font-size: 20px;
-        position: relative;
-        top: 11px;
-        display: inline-block;
-        font-family: 'Glyphicons Halflings';
-        -webkit-font-smoothing: antialiased;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 1;
-        color: black;
-        vertical-align: middle;
-        margin-right: 8px;
-    }
-    
-    .glyphicon {
-        position: relative;
-        top: 1px;
-        display: inline-block;
-        font-family: 'Glyphicons Halflings';
-        -webkit-font-smoothing: antialiased;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 1;
-        -moz-osx-font-smoothing: grayscale;
-        margin-right: 0px;
-    }
-
-
-    
-    .glyphicon.glyphicon-globe {
-        font-size: 10px;
-        color: black;
-    }
-    /* cores dos icones */
-    
-    .glyphicon {
-        /*color: #FFCA08; */
-        
-        color: #000000;
-        font-size: 20px;
-    }
-    
-    .glyphicon-asterisk:before {
-        content: "\2a";
-    }
-    
-    .glyphicon-plus:before {
-        content: "\2b";
-    }
-    
-    .glyphicon-euro:before {
-        content: "\20ac";
-    }
-    
-    span.glyphicon {
-        vertical-align: -20px;
-        margin-top: -5px;
-    }
-    
-    .glyphicon.center:before {
-        vertical-align: -20px;
-    }
-
-    /* icone search */
-    #search .glyphicon {
-        vertical-align: middle;
-        vertical-align: text-top;
-        float: right;
-    }
-
-    /* Letra do menu */
+    /*
+     * *********************************************************************************
+     *
+     * Letra do menu */
     
     .navbar .nav > li > a {
-        float: none;
+        
         font-family: "Proxima Nova";
         color: #FFFFFF;
         
@@ -220,9 +149,13 @@
     
     .navbar .nav > li > a:hover {
         float: none;
-        text-decoration: none;
+        text-decoration: initial;
         color: #FFFFFF;
+        background-color: #00BFA5;
+        
     }
+
+
     /*  teste enable absolute positioning  */
     
     .inner-addon {
@@ -233,39 +166,8 @@
     #bs-example-navbar-collapse-1 .glyphicon {
         position: rigth;
         right: 0;
-        padding: 0px 50px;
+        //padding: 0px 50px;
     }
-    /* tab color */
-    
-    .nav-tabs>li>a {
-        background-color: #000;
-        background-color: #009688;
-        //border-color: #777777;
-        color: #fff;
-    }
-    /* active tab color */
-    
-    .nav-tabs>li.active>a,
-    .nav-tabs>li.active>a:hover,
-    .nav-tabs>li.active>a:focus {
-        color: ff0;
-        background-color: #009688;
-        border: 1px solid ff0;
-    }
-    /* hover tab color */
-    
-    .nav-tabs>li>a:hover {
-        border-color: #468C7D;
-        background-color: #00bfa5;
-        background-color: #26A69A;
-    }
-    /* pills css */
-    
-    .nav-pills>li>a {
-        border-color: #777777;
-        color: #fff;
-    }
-    /* active tab color */
     
     .nav-pills>li.active>a,
     .nav-tabs>li.active>a:hover,
@@ -274,6 +176,7 @@
         background-color: #3A8477;
         //border: 1px solid ff0;
     }
+    
     /* tab color */
     
     .nav-pills>li>a {
@@ -292,15 +195,15 @@
     /* hover tab color */
     
     .nav-pills>li>a:hover {
-        border-color: #468C7D;
-        background-color: #26A69A;
+        //border-color: #468C7D;
+        //background-color: #26A69A;
         background-color: #009688;
     }
     
     li {
         display: inline-block;
-        text-align: center;
-        color: #222222;
+        //text-align: center;
+        //color: #222222;
         //margin: 0px 0px 0px 0px;
         //border-radius: 3px;
         //-moz-border-radius: 3px;
@@ -313,7 +216,7 @@
         top: 25px;
         left: 0;
         background-color: #fff;
-        display: none;
+        //display: none;
     }
     /* Dropdown css */
     
@@ -324,7 +227,7 @@
     
     .dropdown-menu>li>a {
         border-color: #777777;
-        color: #FFCA08;
+        //color: #FFCA08;
     }
     /* active tab color */
     
@@ -351,7 +254,7 @@
         width: 100%;
         border: 1px solid ff0;
         background-color: #3A8477;
-        color: #FFCA08;
+        //color: #FFCA08;
     }
     /* hover tab color */
     
@@ -359,17 +262,13 @@
         width: 100%;
         border-color: #468C7D;
         background-color: #468C7D;
-        background-color: #000;
-        background-image: -webkit-linear-gradient(bottom, #205249, #1a463d 17%, 205249 21%, #468C7D);
-        background-image: -moz-linear-gradient(bottom, #205249, #1a463d 17%, 205249 21%, #468C7D);
-        background-image: -o-linear-gradient(bottom, #205249, #1a463d 17%, 205249 21%, #468C7D);
-        background-image: -ms-linear-gradient(bottom, #205249, #1a463d 17%, 205249 21%, #468C7D);
-        background-image: linear-gradient(to top, #205249, #1a463d 17%, 205249 21%, #468C7D);
-        background-image: linear-gradient(to top, #205249, #1a463d 17%, 205249 21%, #468C7D);
-        background-image: linear-gradient(to top, #205249, #1a463d 17%, #205249 21%, #468C7D);
+        
     }
+
+
+
     /*
-     *
+     * *********************************************************************************
      *CSS para o footer
      *
      */
@@ -495,7 +394,7 @@
     
     #tab_footer .nav-tabs>li>a {
         background-color: #000000;
-        border-color: #000000;
+        //border-color: #000000;
         color: #fff;
     }
     /*footer distributed with adress and Phones*/
@@ -503,8 +402,8 @@
     .footer-distributed {
         background-color: #00796b;
         border-color: #26A69A;
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-        box-sizing: border-box;
+        //box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+        //box-sizing: border-box;
         width: 100%;
         text-align: left;
         font: bold 16px sans-serif;
@@ -681,4 +580,28 @@
         }
     }
 
+    .navbar-toggle {
+        position: relative;
+        float: right;
+        padding: 9px 10px;
+        margin-top: 8px;
+        margin-right: 15px;
+        margin-bottom: 8px;
+        background-image: #26A69A;
+        border: 1px solid #009688;
+        border-radius: 4px;
+    }
+
+    .navbar-toggle .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #FFFFFF/* change this to any color you want! */;
+    }
+
+
     
+    
+
+

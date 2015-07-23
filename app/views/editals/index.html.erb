@@ -7,10 +7,11 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:date) %></th>
+      <th><%= model_class.human_attribute_name(:nome) %></th>
+      <th><%= model_class.human_attribute_name(:data) %></th>
       <th><%= model_class.human_attribute_name(:descricao) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th><%= model_class.human_attribute_name(:baixar) %></th>
+      <th><%=t 'Baixar', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
