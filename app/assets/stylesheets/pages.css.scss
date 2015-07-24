@@ -18,16 +18,34 @@
     html,
     body {
         height: 100%;
-        //font-size:100%;
+        font-size:100%;
     }
 
 
+    body {
+
+        background-color: #FFFFFF;
+        //background-image: image-url('bg_feop_site.jpg');
+        //background-repeat: repeat;
+        //background-size: 9%;
+        font-family: "Proxima Nova";
+        font-weight: 100%;
+        //padding: 10px;
+        //padding-bottom: 60px;
+        
+        /* Height of the footer */
+        position: relative;
+        margin-top: 0px;
+        padding-top: 125px;
+        height: 100%;
+        width: 100%;
+    }
     
     #menuPrincipal {
         margin-top: 120px;
         border: 1px solid #009688;
         width: 100%;
-        height: 80%;
+        height: 100%;
         text-align: center;
         //width: 1680px;
         //height: 45px;
@@ -37,15 +55,22 @@
 
     }
     
+    #menu_login {
+        position: absolute;
+        right: -2%;
+        top: -10%;
+        clear: right;
+        
+    }
+
     #login_area {
-        //background-color: #FFCA08;
-        //background-color: #3A8477;
         width: 100%;
         height: 0px;
-        text-align: right;
+        text-align: center;
         background-color: #4DB6AC;
-        top: 0%;
-        clear: right;
+        background-color: #26A69A;
+        float: right;
+        
     }
     
     #logo {
@@ -56,46 +81,40 @@
         //top: 0%;
         //left: 2%;
         background-color: #009688;
-        clear: left;
+        float: left;
     }
-    
-    
     
     #search .btn {
-        background-color: #1b5e20;
-        padding: 10px 10px;
-        font: 13px sans-serif;
-        text-decoration: none;
-        border: 1px solid #000;
-        border-color: #aaa #444 #444 #aaa;
-        color: #000;
-        float: right;
+        background: transparent;
+        background-color: #009688;
+        border: 1px solid #009688;
+        color: #FFFFFF;
+        
     }
-    
-    
-    
-    #bt_pesquisa {
-        float: right;
-    }
-    
-    #imput_pesquisa {
-        float: right;
-    }
-    
-    #menu_login {
-        position: absolute;
-        right: 10px;
-        top: 0%;
-        top: 0px;
-    }
-    
-    
+
+
     .navbar {
         //background-color: #FFCA08;
         background-color: #26a69a;
         background-color: #26a69a;
         position: absolute;
         border: 1px solid #009688;
+        text-align: center;
+            
+        
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+        
+    }
+
+    .navbar li{
+        display:inline;
+    }
+    .navbar a{
+        display:inline-block;
+        padding:10px;
     }
 
     #nav_logo{
@@ -106,8 +125,13 @@
     
     #bs-example-navbar-collapse-1 .collapse navbar-collapse {
         text-align: center;
-        width: 100px;
-        right: 10px;
+        width: 100%;
+        //right: 10px;
+
+       float:left;
+       overflow:hidden;
+       position:relative;
+        
     }
     
     
@@ -144,12 +168,12 @@
         
         font-family: "Proxima Nova";
         color: #FFFFFF;
-        
+        font-size: 18px;
+        text-align: center;
     }
     
     .navbar .nav > li > a:hover {
         float: none;
-        text-decoration: initial;
         color: #FFFFFF;
         background-color: #00BFA5;
         
@@ -182,15 +206,16 @@
     .nav-pills>li>a {
         //border-color: #777777;
         //color:#fff;
+        
     }
     /* active tab color */
     
     .nav-pills>li.active>a,
     .nav-tabs>li.active>a:hover,
     .nav-tabs>li.active>a:focus {
-        //color: ff0;
-        //border: 1px solid ff0;
-        //background-color: #3A8477;
+        color: ff0;
+        border: 1px solid ff0;
+        background-color: #26A69A;
     }
     /* hover tab color */
     
@@ -202,11 +227,11 @@
     
     li {
         display: inline-block;
-        //text-align: center;
-        //color: #222222;
-        //margin: 0px 0px 0px 0px;
-        //border-radius: 3px;
-        //-moz-border-radius: 3px;
+        text-align: center;
+        color: #222222;
+        margin: 0px 0px 0px 0px;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
         //box-shadow: 2px 3px 5px #000000;
     }
     /*Menu dropdown da barra superior*/
@@ -216,6 +241,7 @@
         top: 25px;
         left: 0;
         background-color: #fff;
+        background-color: #26A69A;
         //display: none;
     }
     /* Dropdown css */

@@ -4,7 +4,7 @@ class EditalsController < ApplicationController
   # GET /editals
   # GET /editals.json
   def index
-    @editals = Edital.all
+    @editals = Edital.all.order("created_at DESC")
   end
 
   # GET /editals/1

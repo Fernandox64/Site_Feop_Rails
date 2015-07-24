@@ -11,15 +11,15 @@
 %body
   %header
     .wrapper.clearfix
-      #logo= link_to "Feop", root_path
       %nav 
         - if user_signed_in?
           = link_to current_user.name, edit_user_registration_path
           = link_to "Adicionar Nova Notícia", new_post_path, class: "button"
           = link_to "Adicionar Novo Projeto a Galeria", new_gallery_path, class: "button"
+          = link_to t('.new', :default => t("helpers.links.Novo Edital")),new_edital_path, class: "button"
         - else 
-          = link_to "Log In", new_user_session_path
-          = link_to "Registrar novo Usuario", new_user_registration_path, class: "button"
+          = link_to "Log In", new_user_session_path, class: "button"
+          //= link_to "Registrar novo Usuario", new_user_registration_path, class: "button"
     
   
   %p.notice= notice

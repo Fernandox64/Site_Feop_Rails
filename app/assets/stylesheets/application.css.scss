@@ -10,41 +10,18 @@
 
 
 
-body {
-    
-    
-
-    background-color: #FFFFFF;
-    //background-image: image-url('bg_feop_site.jpg');
-    //background-repeat: repeat;
-    //background-size: 9%;
-    font-family: "Proxima Nova";
-    //font-weight: 100;
-    padding: 10px;
-    padding-bottom: 60px;
-    /* Height of the footer */
-    position: relative;
-    margin-top: 0px;
-    padding-top: 115px;
-    height: 100%;
-}
 
 section {
     padding-top: 0px;
-    margin-top: -40px;
+    margin-top: 0px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 400;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 40px;
 }
 
 .wrapper {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -64,15 +41,16 @@ header {
         float: left;
         font-size: 1.75rem;
         a {
-            color: #333233;
+            color: #000000;
             text-decoration: none;
             &:hover {
-                color: #f4ff81;
+                color: #50A7C7;
+
             }
         }
     }
     nav {
-        margin-top: 210px;
+        margin-top: 10px;
         float: right;
     }
 }
@@ -84,8 +62,12 @@ header {
 	outline: none;
 	background: #009688;
 	color: #ffffff;
-
 	background-color: #009688;
+    &:hover {
+                background-color: #00BFA5;
+                color: #FFFFFF;
+                border: 1px solid #FFFFFF;
+            }
 }
 
 

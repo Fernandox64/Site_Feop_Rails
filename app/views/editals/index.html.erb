@@ -11,7 +11,9 @@
       <th><%= model_class.human_attribute_name(:data) %></th>
       <th><%= model_class.human_attribute_name(:descricao) %></th>
       <th><%= model_class.human_attribute_name(:baixar) %></th>
-      <th><%=t 'Baixar', :default => t("helpers.actions") %></th>
+      <% if current_user.present? %>
+        <th><%=t 'Baixar', :default => t("helpers.actions") %></th>
+      <% end %>
     </tr>
   </thead>
   <tbody>
@@ -25,21 +27,25 @@
         
         <td>
 
-          
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+         <% if current_user.present? %>
+
+           <%= link_to t('.edit', :default => t("helpers.links.editar")),
                       edit_edital_path(edital), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+           <%= link_to t('.destroy', :default => t("helpers.links.deletar")),
                       edital_path(edital),
                       :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Você esta certo disso?')) },
                       :class => 'btn btn-xs btn-danger' %>
+         <% end %>
+
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-
+<!--
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_edital_path,
             :class => 'btn btn-primary' %>
+            -->
