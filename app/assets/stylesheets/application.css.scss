@@ -1,14 +1,15 @@
 /*
 *= require_self
+*= require_tree .
+*= require owl.carousel
+*= require owl.theme
 */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "pages.css.scss";
-@import 'home.css.scss';
-@import 'posts.css.scss';
-
-
+//@import "bootstrap-sprockets";
+//@import "bootstrap";
+//@import "pages.css.scss";
+//@import 'home.css.scss';
+//@import 'posts.css.scss';
 
 
 section {
@@ -49,10 +50,7 @@ header {
             }
         }
     }
-    nav {
-        margin-top: 10px;
-        float: right;
-    }
+    
 }
 
 .button {

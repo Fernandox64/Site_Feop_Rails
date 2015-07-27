@@ -12,97 +12,66 @@
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
 
-  <!-- Novo navbar-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <style type="text/css">
-    .bs-example{
-      margin: 20px;
-    }
-  </style>
-
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style>
+
+    
+
+
+    </style>
 
 
 </head>
 
 <body>
+  
+  
 
-<!DOCTYPE HTML>
+    <!-- Navigation -->
+    <nav class="navbar  navbar-fixed-top" role="navigation">
 
-<html lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="HTML Tidy for Linux/x86 (vers 25 March 2009), see www.w3.org" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Rodapé</title>
-
-<link rel="stylesheet" href="bootstrap.min.css">
-<script src="http://codeorigin.jquery.com/jquery-1.10.2.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
-
-<!-- Novo navbar-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<style type="text/css">
-    .bs-example{
-      margin: 20px;
-    }
-</style>
-
-
-</head>
-
-<body>
-
-
-
-
-
-<!-- Navigation -->
-  <nav class="navbar  navbar-fixed-top" role="navigation">
-
-    <div id="logo"> 
-      <div class="navbar-header">
-        <a class="navbar-brand" id="nav_logo"  href=<%=  home_path %> >
-         <%= image_tag("Logo FEOP_policromia.png", :type => :upload, :width => 200, :height => 100, :crop => :fill) %>       
-       </a>
+      <div id="logo"> 
+        <div class="navbar-header">
+          <a class="navbar-brand" id="nav_logo"  href=<%=  home_path %> >
+           <%= image_tag("Logo FEOP_policromia.png", :type => :upload, :width => 200, :height => 100, :crop => :fill) %>       
+         </a>
+       </div>
      </div>
-   </div>
-
-  
-  
+    
 
 
-    <!-- Menu  Login -->
-    <div class="bs-example" id="menu_login">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#login_area">
-          <li>
-            <span class="sr-only">Dispositivos Móveis</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </li>  
-        </button>
-      </div>
+      <!-- Menu  Login -->
+      <div class="bs-example" id="menu_login">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#login_area">
+            <li>
+              <span class="sr-only">Dispositivos Móveis</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </li>  
+          </button>
+        </div>
 
-      <ul class="nav nav-pills" id="login_area">
-        
+        <ul class="nav nav-pills" id="login_area">
 
 
-        <li class="<%=  yield(:login) %>"><%= link_to "Login", login_path %></li>
-        <li class="<%=  yield(:imprensa) %>"><%= link_to "Imprensa", imprensa_path %></li>
-        <li class="<%=  yield(:financiar) %>"><%= link_to "Financiar", financiar_path %></li>
-        <li><a href="http://conveniar.feop.com.br:8081/Pesquisador/Login.aspx?ReturnUrl=%2fpesquisador%2f" target=”_blank”>Acesso do pesquisador</a></li>
+
+          <li class="<%=  yield(:login) %>"><%= link_to "Login", login_path %></li>
+          <li class="<%=  yield(:imprensa) %>"><%= link_to "Imprensa", imprensa_path %></li>
+          <li class="<%=  yield(:financiar) %>"><%= link_to "Financiar", financiar_path %></li>
+          <li><a href="http://conveniar.feop.com.br:8081/Pesquisador/Login.aspx?ReturnUrl=%2fpesquisador%2f" target=”_blank”>Acesso do pesquisador</a></li>
         <!--
         <li><%= link_to "Acesso do pesquisador", "http://conveniar.feop.com.br:8081/Pesquisador/Login.aspx?ReturnUrl=%2fpesquisador%2f", target: '_blank' %> </li>-->
         <li class="<%=  yield(:faq) %>"><%= link_to "FAQ", faq_path %></li>
@@ -112,19 +81,20 @@
           <div class="input-group" id="imput_pesquisa">
             <input class="form-control" type="text" placeholder="Pesquisar" />
             <div class="input-group-btn">
-            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+              <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
             </button>
 
           </div>
         </div>
       </form>
-      </li>
+    </li>
 
 
-      </ul>
+  </ul>
 
-    </div>
-  
+</div>
+    
+    
   
   <!-- Menu com icones
   <div class="bs-example">
@@ -134,26 +104,26 @@
         <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Messages</a></li>
     </ul>
 </div>
-     -->
-  <div class="container" id="menuPrincipal">
-  
-    <div class="navbar-header" style="position: relative;" id="mobile">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <li>
-          <span class="sr-only">Dispositivos Móveis</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </li>  
-      </button>
-    </div>
-    
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav nav-pills" > 
-        <li class="<%=  yield(:fundacao) %>"><%= link_to "A Fundação", fundacao_path %></li>
-        
+-->
+<div class="container" id="menuPrincipal">
+
+  <div class="navbar-header" style="position: relative;" id="mobile">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <li>
+        <span class="sr-only">Dispositivos Móveis</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </li>  
+    </button>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav nav-pills" > 
+      <li class="<%=  yield(:fundacao) %>"><%= link_to "A Fundação", fundacao_path %></li>
+
         <!--
         <li class="dropdown">
           <a href="" data-toggle="dropdown" class="dropdown-toggle">A Fundação<b class="caret"></b></a>
@@ -167,7 +137,7 @@
             <li><%= link_to "Emails e Ramais", emails_ramais_path %></li>
           </ul>
         </li>
-        -->
+      -->
 
         <!--
           <li><a href="">Apoio a UFOP</a></li>
@@ -177,21 +147,21 @@
             <li><a href="#">Conselhos</a></li>
             <li class="divider"></li>
             <li><a href="#">Emails e Ramais</a></li>
-         -->
-        
-        
+          -->
+
+
           <!--<li class="<%=  yield(:portal_de_compras) %>"><%= link_to "Portal de Compras", portal_de_compras_path %></li>-->
-        <li><a href="http://conveniar.feop.com.br:8081/Fornecedor/Login.aspx?ReturnUrl=%2ffornecedor%2f" target=”_blank”>Portal de Compras</a></li>
-        <!--<li class="<%=  yield(:servicos) %>"><%= link_to "Serviços", servicos_path %></li>-->
-        <li class="<%=  yield(:projetos) %>"><%= link_to "Projetos", projetos_path %></li>
-        
-        <li class="<%=  yield(:galeria_de_projetos) %>"><%= link_to "Galeria de Projetos", galeria_de_projetos_path %></li>
-        
-        
-        <li class="<%=  yield(:conveniar) %>"><%= link_to "Conveniar", conveniar_path %></li>
-        <li class="<%=  yield(:juridico) %>"><%= link_to "Jurídico", juridico_path %></li>
-        <li class="<%=  yield(:setores) %>"><%= link_to "Setores", setores_path %></li>
-        
+          <li><a href="http://conveniar.feop.com.br:8081/Fornecedor/Login.aspx?ReturnUrl=%2ffornecedor%2f" target=”_blank”>Portal de Compras</a></li>
+          <!--<li class="<%=  yield(:servicos) %>"><%= link_to "Serviços", servicos_path %></li>-->
+          <li class="<%=  yield(:projetos) %>"><%= link_to "Projetos", projetos_path %></li>
+
+          <li class="<%=  yield(:galeria_de_projetos) %>"><%= link_to "Galeria de Projetos", galeria_de_projetos_path %></li>
+
+
+          <li class="<%=  yield(:conveniar) %>"><%= link_to "Conveniar", conveniar_path %></li>
+          <li class="<%=  yield(:juridico) %>"><%= link_to "Jurídico", juridico_path %></li>
+          <li class="<%=  yield(:setores) %>"><%= link_to "Setores", setores_path %></li>
+
         <!--
         <li class="dropdown">
           <a href="" data-toggle="dropdown" class="dropdown-toggle">Setores<b class="caret"></b></a>
@@ -206,24 +176,24 @@
             <li><%= link_to "Assessoria Jurídica", acessoria_path %></li>
           </ul>
         </li>
-        -->
+      -->
 
-        <li class="<%=  yield(:editais) %>"><%= link_to "Editais", editais_path %></li>
-        
-        <li><a href="http://conveniar.feop.com.br:8081/eventos/" target=”_blank”>Eventos</a></li>
-        <li class="<%=  yield(:mapa_do_site) %>"><%= link_to "Mapa do Site", mapa_do_site_path %></li>
+      <li class="<%=  yield(:editais) %>"><%= link_to "Editais", editais_path %></li>
 
-        <li class="<%=  yield(:fale_conosco) %>"><%= link_to "Fale conosco", fale_conosco_path %></li>
-        
-  
+      <li><a href="http://conveniar.feop.com.br:8081/eventos/" target=”_blank”>Eventos</a></li>
+      <li class="<%=  yield(:mapa_do_site) %>"><%= link_to "Mapa do Site", mapa_do_site_path %></li>
 
-         
-          </ul>
-        </div>
+      <li class="<%=  yield(:fale_conosco) %>"><%= link_to "Fale conosco", fale_conosco_path %></li>
 
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container -->
+
+
+
+    </ul>
+  </div>
+
+  <!-- /.navbar-collapse -->
+</div>
+<!-- /.container -->
 
       <!-- navbar verde 
       
@@ -232,16 +202,80 @@
         
       </nav>
 
-      --> 
+    --> 
 
-    </nav>
+  </nav>
+
+  <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        
+        <!--
+        <div class="logo-holder">
+          <%= image_tag("Logo FEOP_policromia.png", :type => :upload, :width => 0, :height => 120, :crop => :fill) %>
+        </div>
+        -->
+
+
+
+
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+              <%= image_tag 'op1.jpg', size: '1900x100' %>
+              <div class="carousel-caption">
+                <!--<h2>Caption 1</h2>-->
+              </div>
+            </div>
+
+            <div class="item">
+              <%= image_tag 'op2.jpg', size: '1900x100' %>
+              <div class="carousel-caption">
+                <!--<h2>Caption 2</h2>-->
+              </div>
+            </div>
+            
+
+            <div class="item">
+              <%= image_tag 'op4.jpg', size: '1900x100' %>
+              <div class="carousel-caption">
+                <!--<h2>Caption 3</h2>-->
+              </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+      
+    </header>
+
+
+
+    
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
     
 
-    $("#menuPrincipal li").click(function(event) {
-    // check if window is small enough so dropdown is created
-    $(".navbar-toggle").is(":visible")
-        $("#bs-example-navbar-collapse-1").toggle();
-    });
-
-
 </body>
+</html>

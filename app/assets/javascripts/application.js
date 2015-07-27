@@ -16,5 +16,5 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require owl.carousel
 //= require_tree
-

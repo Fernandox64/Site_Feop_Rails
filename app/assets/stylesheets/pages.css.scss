@@ -57,8 +57,8 @@
     
     #menu_login {
         position: absolute;
-        right: -2%;
-        top: -10%;
+        right: 0%;
+        top: 0%;
         clear: right;
         
     }
@@ -149,7 +149,7 @@
     
     .nav-pills > li.active > a:hover {
         color: black;
-        background-color: #ffee58;
+        //background-color: #ffee58;
 
     }
     
@@ -337,12 +337,7 @@
     #navigation {
         background-color: #3A8477;
         width: 100%;
-        background-color: #000;
-        background-image: -webkit-linear-gradient(bottom, #ffd200, #ff0 17%, #ff0 21%, #ffd200);
-        background-image: -moz-linear-gradient(bottom, #ffd200, #ff0 17%, #ff0 21%, #ffd200);
-        background-image: -o-linear-gradient(bottom, #ffd200, #ff0 17%, #ff0 21%, #ffd200);
-        background-image: -ms-linear-gradient(bottom, #ffd200, #ff0 17%, #ff0 21%, #ffd200);
-        background-image: linear-gradient(to top, #ffd200, #ff0 17%, #ff0 21%, #ffd200);
+        background-color: #26a69a;
     }
     
     #navigation >ul > p {
@@ -405,15 +400,8 @@
     
     #footer-conteiner {
         border-color: #468C7D;
-        background-color: #468C7D;
-        background-color: #000;
-        background-image: -webkit-linear-gradient(bottom, #205249, #1a463d 17%, 205249 21%, #468C7D);
-        background-image: -moz-linear-gradient(bottom, #205249, #1a463d 17%, 205249 21%, #468C7D);
-        background-image: -o-linear-gradient(bottom, #205249, #1a463d 17%, 205249 21%, #468C7D);
-        background-image: -ms-linear-gradient(bottom, #205249, #1a463d 17%, 205249 21%, #468C7D);
-        background-image: linear-gradient(to top, #205249, #1a463d 17%, 205249 21%, #468C7D);
-        background-image: linear-gradient(to top, #205249, #1a463d 17%, 205249 21%, #468C7D);
-        background-image: linear-gradient(to top, #1a463d, #205249 17%, #205249 21%, #468C7D);
+        background-color: #26a69a;
+        
     }
     /*footer distributed*/
     /* tab color */
@@ -624,6 +612,99 @@
         height: 2px;
         border-radius: 1px;
         background-color: #FFFFFF/* change this to any color you want! */;
+    }
+
+    
+
+    /* Carrocel bootstrap estilizado */
+    
+    /* Ultilizado */
+    /* Home Page Carousel */
+
+    header.carousel {
+      height: 50%;
+      /* Tamanho do Carousel */
+
+    }
+
+    header.carousel .item,
+    header.carousel .item.active,
+    header.carousel .carousel-inner {
+      height: 100%;
+
+    }
+
+    header.carousel .carousel-inner {
+      
+
+      
+    }
+
+    header.carousel .fill {
+      width: 100%;
+      height: 100%;
+      //background-position: center;
+      //background-size: cover;
+
+    }
+
+    /* 404 Page Styles */
+
+    .error-404 {
+      font-size: 100px;
+    }
+
+    /* Pricing Page Styles */
+
+    .price {
+      
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    .price sup {
+      
+      font-size: 20px;
+    }
+
+    .period {
+      display: block;
+      font-style: italic;
+    }
+
+
+
+
+    /* Responsive Styles */
+
+    @media(max-width:991px) {
+      .customer-img,
+      .img-related {
+        
+      }
+    }
+
+    @media(max-width:767px) {
+      .img-portfolio {
+        
+      }
+
+      header.carousel .carousel {
+        height: 100%;
+
+      }
+    }
+
+    .logo-holder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 5%;
+      margin-bottom: -90px;
+      margin-left: 5%;
+      /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
     }
 
 
