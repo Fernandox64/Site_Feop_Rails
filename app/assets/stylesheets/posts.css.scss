@@ -1,9 +1,10 @@
 #post_show {
 	padding-top: 2rem;
+	margin-left: 15%;
 	.post_image_description {
 		width: 50%;
 		float: left;
-		margin-right: 5%;
+		margin-left: 15%;
 	}
 	.post_data {
 		width: 15%;
@@ -64,12 +65,14 @@
 						color: #333233;
 						&:hover {
 							color: #50A7C7;
-						}
+							background-color: #FFF;
 					}
+
 				}
+			}
 				.data {
 					padding: .75rem 5%;
-					color: #969696;
+					color: #000000;
 					.username, .buttons {
 						margin: 0;
 						font-size: .8rem;
@@ -89,7 +92,8 @@
 	}
 	h1 {
 		margin: 0;
-		color: #333233;
+		margin-left: 15%;
+		color: #000000;
 	}
 	img {
 		width: 100%;
@@ -98,18 +102,20 @@
 	.username {
 		color: #969696;
 		margin: 0 0 1.5rem 0;
+		margin-left: 15%;
 	}
 	.description {
 		margin: 2rem 0;
 		font-size: 1.1rem;
 		line-height: 1.5;
-		color: #969696;
+		color: #000000;
 	}
 }
 
 #comments {
 	padding-bottom: 4rem;
 	width: 50%;
+	margin-left: 15%;
 	.comment_count {
 		border-bottom: 1px solid #E9E9E9;
 		padding-bottom: .5rem;
@@ -126,7 +132,7 @@
 		}
 		.content {
 			margin: 0;
-			color: #969696;
+			color: #000000;
 		}
 	}
 	.comment_content {

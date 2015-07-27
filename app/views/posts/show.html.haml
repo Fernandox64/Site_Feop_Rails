@@ -10,7 +10,8 @@
             = image_tag @post.image.url(:medium)
             .description= simple_format(@post.description)
         .post_data
-            = link_to "Link Visitado", @post.link, class: "button"
+            //= link_to "Link Visitado", @post.link, class: "button"
+            = link_to "Página Inicial", root_path, class: "button"
             = link_to like_post_path(@post), method: :get, class: "data" do
                 %i.fa.fa-thumbs-o-up
                 = pluralize(@post.get_upvotes.size, "Like")
@@ -32,6 +33,16 @@
             %p.content= comment.content
     = render 'comments/form'
 
-= link_to "Edit", edit_post_path(@post), class: "button"
-= link_to "Destroy", post_path(@post), class: "button", method: :delete, data: {confirm: "Tem certeza desta Ação?"}
-= link_to "Home", root_path, class: "button"
+
+
+
+%nav
+    - if user_signed_in?
+        = link_to "Editar", edit_post_path(@post), class: "button"
+        = link_to "Deletar", post_path(@post), class: "button", method: :delete, data: {confirm: "Tem certeza desta Ação?"}
+        = link_to "Página Inicial", root_path, class: "button"
+    - else
+        = link_to "Página Inicial", root_path, class: "button"
+        
+  
+

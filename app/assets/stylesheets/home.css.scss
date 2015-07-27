@@ -1,6 +1,9 @@
 #intro {
-	margin: 1.75rem 0 1.75rem 0;
-	text-align: center;
+	//margin: 1.75rem 0 1.75rem 0;
+	text-align: left;
+	margin-left: 10%;
+	/* distancia do carroucel */
+	margin-top: -3%;
 	font-size: 1.75rem;
 	line-height: 1;
 	span {
@@ -10,6 +13,7 @@
 }
 
 #posts {
+	margin-left: 7%;
 	.post {
 		background: #F8F9FA;
 		width: 20%;
@@ -28,7 +32,7 @@
 		}
 		.post_content {
 			h2 {
-				margin: 0;
+				margin: 2;
 				font-weight: 100;
 				padding: 1rem 5%;
 				border-bottom: 1px solid #E4E4E4;

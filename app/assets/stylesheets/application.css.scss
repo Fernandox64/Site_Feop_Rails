@@ -5,11 +5,11 @@
 *= require owl.theme
 */
 
-//@import "bootstrap-sprockets";
-//@import "bootstrap";
-//@import "pages.css.scss";
-//@import 'home.css.scss';
-//@import 'posts.css.scss';
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "pages.css.scss";
+@import 'home.css.scss';
+@import 'posts.css.scss';
 
 
 section {
@@ -21,15 +21,18 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 40px;
 }
 
+
 .wrapper {
     width: 100%;
     margin: 0 auto;
+
 }
 
 .clearfix:before,
 .clearfix:after {
     content: " ";
     display: table;
+    margin-left: 25%;
 }
 
 .clearfix:after {
@@ -37,7 +40,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-    width: 100%;
+    //width: 100%;
+
     #logo {
         float: left;
         font-size: 1.75rem;
@@ -45,12 +49,11 @@ header {
             color: #000000;
             text-decoration: none;
             &:hover {
-                color: #50A7C7;
+                color: #00BFA5;
 
             }
         }
     }
-    
 }
 
 .button {
@@ -59,7 +62,7 @@ header {
 	border-radius: .3rem;
 	outline: none;
 	background: #009688;
-	color: #ffffff;
+	color: #FFFFFF;
 	background-color: #009688;
     &:hover {
                 background-color: #00BFA5;
@@ -67,8 +70,3 @@ header {
                 border: 1px solid #FFFFFF;
             }
 }
-
-
-
-
-
