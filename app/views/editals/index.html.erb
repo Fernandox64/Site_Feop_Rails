@@ -1,14 +1,16 @@
 <%- model_class = Edital -%>
 <div class="page-header">
   <h1>Editais</h1>
-  
 </div>
+
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:nome) %></th>
+      <% if current_user.present? %>
+        <th><%= model_class.human_attribute_name(:id) %></th>
+      <% end %>
       <th><%= model_class.human_attribute_name(:data) %></th>
+      <th><%= model_class.human_attribute_name(:nome) %></th>
       <th><%= model_class.human_attribute_name(:descricao) %></th>
       <th><%= model_class.human_attribute_name(:baixar) %></th>
       <% if current_user.present? %>
@@ -16,12 +18,15 @@
       <% end %>
     </tr>
   </thead>
+  
   <tbody>
     <% @editals.each do |edital| %>
       <tr>
-        <td><%= link_to edital.id, edital_path(edital) %></td>
-        <td><%= edital.name %></td>
+        <% if current_user.present? %>
+          <td><%= edital.id %></td>
+        <% end %>
         <td><%= edital.date %></td>
+        <td><%= link_to edital.name, edital_path(edital) %></td>
         <td><%= edital.descricao %></td>
         <td><%= link_to "Download", edital.pdf.url(:original, false), class: "button" %></td>
         

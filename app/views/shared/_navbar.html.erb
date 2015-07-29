@@ -40,16 +40,30 @@
 
     <!-- Navigation -->
     <nav class="navbar  navbar-fixed-top" role="navigation">
+      
+      
+      <div id="logo"> 
+          <a  href=<%=  home_path %> >
+           <%= image_tag("feop_white.png", :type => :upload, :width => 160, :height => 80, :crop => :fill) %>       
+         </a>
+      </div>
+    
+      <!--
+
+      <div id="logo"> 
+          <a  href=<%=  home_path %> >
+           <%= image_tag("Logo FEOP_no_text.png", :type => :upload, :width => 200, :height => 50, :crop => :fill) %>       
+         </a>
+      </div>
 
       <div id="logo"> 
         <div class="navbar-header">
           <a class="navbar-brand" id="nav_logo"  href=<%=  home_path %> >
-           <%= image_tag("Logo FEOP_policromia.png", :type => :upload, :width => 200, :height => 100, :crop => :fill) %>       
+           <%= image_tag("Logo FEOP_no_text.png", :type => :upload, :width => 200, :height => 50, :crop => :fill) %>       
          </a>
        </div>
-     </div>
-    
-
+      </div>
+      
 
       <!-- Menu  Login -->
       <div class="bs-example" id="menu_login">
@@ -107,7 +121,7 @@
 -->
 <div class="container" id="menuPrincipal">
 
-  <div class="navbar-header" style="position: relative;" id="mobile">
+  <div class="navbar-header" style="position: relative;" >
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
       <li>
         <span class="sr-only">Dispositivos Móveis</span>
@@ -120,24 +134,25 @@
 
   <!-- Collect the nav links, forms, and other content for toggling -->
 
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav nav-pills" > 
-      <li class="<%=  yield(:fundacao) %>"><%= link_to "A Fundação", fundacao_path %></li>
-
-        <!--
+  <div class="row hidden-xs">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav nav-pills " > 
+        <!--<li class="<%=  yield(:fundacao) %>"><%= link_to "A Fundação", fundacao_path %></li>-->
         <li class="dropdown">
           <a href="" data-toggle="dropdown" class="dropdown-toggle">A Fundação<b class="caret"></b></a>
-          <ul class="dropdown-menu" id="menu_drop">
-            <li><%= link_to "Apoio a UFOP", apoio_path %> </li>
-            <li><%= link_to "Missão e Valores", missao_path %></li>
-            <li><%= link_to "Palavra do Presidente", presidente_path %></li>
-            <li><%= link_to "Estatuto", estatuto_path %></li>
-            <li><%= link_to "Conselhos", conselhos_path %></li>
+          <ul class="dropdown-menu" id="menu_drop" role="menu">
+            <li><a><%= link_to "Apoio a UFOP", apoio_path %> </a></li>
+            <li><a><%= link_to "Missão e Valores", missao_path %></a></li>
+            <li class="<%=  yield(:projetos) %>"><a><%= link_to "Projetos", projetos_path %></a></li>
+            <li><a><%= link_to "Palavra do Presidente", presidente_path %></a></li>
+            <li><a><%= link_to "Estatuto", estatuto_path %></a></li>
+            <li><a><%= link_to "Conselhos", conselhos_path %></a></li>
             <li class="divider"></li>
-            <li><%= link_to "Emails e Ramais", emails_ramais_path %></li>
+            <li><a><%= link_to "Emails e Ramais", emails_ramais_path %></a></li>
+            <li class="<%=  yield(:juridico) %>"><a><%= link_to "Jurídico", juridico_path %></a></li>
           </ul>
         </li>
-      -->
+
 
         <!--
           <li><a href="">Apoio a UFOP</a></li>
@@ -153,56 +168,50 @@
           <!--<li class="<%=  yield(:portal_de_compras) %>"><%= link_to "Portal de Compras", portal_de_compras_path %></li>-->
           <li><a href="http://conveniar.feop.com.br:8081/Fornecedor/Login.aspx?ReturnUrl=%2ffornecedor%2f" target=”_blank”>Portal de Compras</a></li>
           <!--<li class="<%=  yield(:servicos) %>"><%= link_to "Serviços", servicos_path %></li>-->
-          <li class="<%=  yield(:projetos) %>"><%= link_to "Projetos", projetos_path %></li>
+          <!--<li class="<%=  yield(:projetos) %>"><%= link_to "Projetos", projetos_path %></li>-->
 
           <li class="<%=  yield(:galeria_de_projetos) %>"><%= link_to "Galeria de Projetos", galeria_de_projetos_path %></li>
 
 
           <li class="<%=  yield(:conveniar) %>"><%= link_to "Conveniar", conveniar_path %></li>
-          <li class="<%=  yield(:juridico) %>"><%= link_to "Jurídico", juridico_path %></li>
-          <li class="<%=  yield(:setores) %>"><%= link_to "Setores", setores_path %></li>
-
-        <!--
-        <li class="dropdown">
-          <a href="" data-toggle="dropdown" class="dropdown-toggle">Setores<b class="caret"></b></a>
-          <ul class="dropdown-menu" id="menu_drop">
-            <li><%= link_to "Projetos", projetos_path %> </li>
-            <li><%= link_to "Nucleo de TI", nucleo_Ti_path %></li>
-            <li><%= link_to "Suprimentos", suprimentos_path %></li>
-            <li><%= link_to "Contas", contas_path %></li>
-            <li><%= link_to "Financeiro", financeiro_path %></li>
-            <li><%= link_to "RH", rh_path %></li>
-            <li><%= link_to "Infraestrutura", infraestrutura_path %></li>
-            <li><%= link_to "Assessoria Jurídica", acessoria_path %></li>
-          </ul>
-        </li>
-      -->
-
-      <li class="<%=  yield(:editais) %>"><%= link_to "Editais", editais_path %></li>
-
-      <li><a href="http://conveniar.feop.com.br:8081/eventos/" target=”_blank”>Eventos</a></li>
-      <li class="<%=  yield(:mapa_do_site) %>"><%= link_to "Mapa do Site", mapa_do_site_path %></li>
-
-      <li class="<%=  yield(:fale_conosco) %>"><%= link_to "Fale conosco", fale_conosco_path %></li>
+          <!--<li class="<%=  yield(:juridico) %>"><%= link_to "Jurídico", juridico_path %></li>-->
+          
+          <!--<li class="<%=  yield(:setores) %>"><%= link_to "Setores", setores_path %></li>-->
 
 
+          <li class="dropdown">
+            <a href="" data-toggle="dropdown" class="dropdown-toggle">Setores<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" id="menu_drop">
+              <li><%= link_to "Projetos", projetos_path %> </li>
+              <li><%= link_to "Nucleo de TI", nucleo_Ti_path %></li>
+              <li><%= link_to "Suprimentos", suprimentos_path %></li>
+              <li><%= link_to "Contas", contas_path %></li>
+              <li><%= link_to "Financeiro", financeiro_path %></li>
+              <li><%= link_to "RH", rh_path %></li>
+              <li><%= link_to "Infraestrutura", infraestrutura_path %></li>
+              <li><%= link_to "Assessoria Jurídica", acessoria_path %></li>
+            </ul>
+          </li>
 
 
-    </ul>
+          <li class="<%=  yield(:editais) %>"><%= link_to "Editais", editais_path %></li>
+
+          <li><a href="http://conveniar.feop.com.br:8081/eventos/" target=”_blank”>Eventos</a></li>
+          <!--<li class="<%=  yield(:mapa_do_site) %>"><%= link_to "Mapa do Site", mapa_do_site_path %></li>-->
+
+          <!--<li class="<%=  yield(:fale_conosco) %>"><%= link_to "Fale conosco", fale_conosco_path %></li>-->
+
+
+
+
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
   </div>
+  <!-- /.container -->
 
-  <!-- /.navbar-collapse -->
-</div>
-<!-- /.container -->
-
-      <!-- navbar verde 
-      
-
-      <nav class="navbar" id="submenu">
-        
-      </nav>
-
-    --> 
+      <!-- navbar verde <nav class="navbar" id="submenu"></nav>--> 
 
   </nav>
   <!-- Header Carousel -->
@@ -228,14 +237,14 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-              <%= image_tag 'op1.jpg', size: '1900x100' %>
+              <%= image_tag 'op1.jpg', size: '1920x101' %>
               <div class="carousel-caption">
                 <!--<h2>Caption 1</h2>-->
               </div>
             </div>
 
             <div class="item">
-              <%= image_tag 'op2.jpg', size: '1900x100' %>
+              <%= image_tag 'op2.jpg', size: '1920x101' %>
               <div class="carousel-caption">
                 <!--<h2>Caption 2</h2>-->
               </div>
@@ -243,7 +252,7 @@
             
 
             <div class="item">
-              <%= image_tag 'op4.jpg', size: '1900x100' %>
+              <%= image_tag 'op4.jpg', size: '1920x101' %>
               <div class="carousel-caption">
                 <!--<h2>Caption 3</h2>-->
               </div>
@@ -252,9 +261,16 @@
         </div>
 
         <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-      
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+
+        
     </div>
 
 

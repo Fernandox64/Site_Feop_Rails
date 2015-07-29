@@ -13,17 +13,18 @@
 }
 
 #posts {
-	margin-left: 7%;
+	margin-left: 2%;
 	.post {
 		background: #F8F9FA;
-		width: 20%;
+		/* Tamanho do post */
+		width: 30%;
         height: 100%;
 		float: left;
 		margin: 1rem 1.5%;
 		border: 1px solid #E4E4E4;
 		border-radius: 0.3rem;
 		.post_image {
-			height: 100px;
+			//height: 20%;
 			overflow: hidden;
 			img {
 				width: 100%;
