@@ -1,14 +1,20 @@
 #post_show {
 	padding-top: 2rem;
-	margin-left: 15%;
+	margin-left: 10%;
 	.post_image_description {
 		width: 50%;
 		float: left;
-		margin-left: 15%;
+		margin-left: 5%;
 	}
+
 	.post_data {
 		width: 20%;
 		float: left;
+		a:hover{
+			background-color: transparent;
+			//background-color: #00BFA5;
+			text-decoration: underline;
+        }
 		.button {
 			width: 100%;
 			display: inline-block;
@@ -66,6 +72,7 @@
 						&:hover {
 							color: #50A7C7;
 							background-color: #FFF;
+
 					}
 
 				}
@@ -115,7 +122,7 @@
 #comments {
 	padding-bottom: 4rem;
 	width: 50%;
-	margin-left: 15%;
+	margin-left: 14%;
 	.comment_count {
 		border-bottom: 1px solid #E9E9E9;
 		padding-bottom: .5rem;

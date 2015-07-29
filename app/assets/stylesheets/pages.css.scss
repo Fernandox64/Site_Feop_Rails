@@ -21,13 +21,17 @@
         font-size:100%;
     }
 
+    * a{
+
+    }
+
 
     body {
 
         background-color: #FFFFFF;
-        background-image: image-url('bg_feop_site.jpg');
-        background-repeat: repeat;
-        background-size: 5%;
+        //background-image: image-url('bg_feop_site.jpg');
+        //background-repeat: repeat;
+        //background-size: 5%;
         font-family: "Proxima Nova";
         font-weight: 100%;
         //padding: 10px;
@@ -76,10 +80,12 @@
     #logo {
         //background: url('/assets/images/Logo FEOP_policromia.png');
         
-        top: 13%;
-        left:20%;
+        position:absolute;
+        top: 8%;
+        left:1%;
         //top: 0%;
         //left: 2%;
+        overflow: hidden;
         background-color: transparent;
         float: left;
         a:hover{
@@ -525,11 +531,17 @@
     .footer-distributed .footer-right {
         display: inline-block;
         vertical-align: top;
+
     }
+
+
     /* Footer left */
     
     .footer-distributed .footer-left {
         width: 40%;
+        a:hover{
+            background-color: transparent;
+        }
     }
     /* The company logo */
     
@@ -548,13 +560,18 @@
         color: #ffffff;
         margin: 20px 0 12px;
         padding: 0;
+        a:hover{
+            background-color: transparent;
+            text-decoration: underline;
+
+        }
     }
     
     .footer-distributed .footer-links a {
         display: inline-block;
         line-height: 1.8;
         text-decoration: none;
-        color: inherit;
+        color: inherit;  
     }
     
     .footer-distributed .footer-company-name {
@@ -567,6 +584,11 @@
     
     .footer-distributed .footer-center {
         width: 35%;
+        a:hover{
+            background-color: transparent;
+            text-decoration: underline;
+            
+        }
 
     }
     
@@ -827,3 +849,4 @@
                     border: 1px solid #FFFFFF;
                 }
     }
+

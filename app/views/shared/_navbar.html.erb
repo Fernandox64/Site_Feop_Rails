@@ -44,7 +44,7 @@
       
       <div id="logo"> 
           <a  href=<%=  home_path %> >
-           <%= image_tag("feop_white.png", :type => :upload, :width => 160, :height => 80, :crop => :fill) %>       
+           <%= image_tag("feop_white.png", :type => :upload, :width => 160, :height => 80, :crop => :fill) %>
          </a>
       </div>
     
@@ -139,7 +139,7 @@
       <ul class="nav nav-pills " > 
         <!--<li class="<%=  yield(:fundacao) %>"><%= link_to "A Fundação", fundacao_path %></li>-->
         <li class="dropdown">
-          <a href="" data-toggle="dropdown" class="dropdown-toggle">A Fundação<b class="caret"></b></a>
+          <a href="" data-toggle="dropdown" class="dropdown-toggle" class="active">A Fundação<b class="caret"></b></a>
           <ul class="dropdown-menu" id="menu_drop" role="menu">
             <li><a><%= link_to "Apoio a UFOP", apoio_path %> </a></li>
             <li><a><%= link_to "Missão e Valores", missao_path %></a></li>
@@ -261,6 +261,8 @@
         </div>
 
         <!-- Controls -->
+  
+
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Anterior</span>
@@ -272,6 +274,7 @@
 
         
     </div>
+    
 
 
 
@@ -288,6 +291,8 @@
     <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
+        "<i class='icon-chevron-left icon-white'><</i>",
+      "<i class='icon-chevron-right icon-white'>></i>"
     })
     </script>
 
