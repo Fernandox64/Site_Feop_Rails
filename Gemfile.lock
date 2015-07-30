@@ -124,6 +124,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pg (0.18.2)
     rack (1.6.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -222,6 +223,7 @@ DEPENDENCIES
   mysql2
   owlcarousel-rails
   paperclip (~> 4.3.0)
+  pg (~> 0.18.2)
   rails (= 4.2.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
