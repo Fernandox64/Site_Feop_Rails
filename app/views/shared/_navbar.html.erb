@@ -23,6 +23,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  
+
+
+
+
+
 
   <style>
 
@@ -39,7 +46,7 @@
   
 
     <!-- Navigation -->
-    <nav class="navbar  navbar-fixed-top" role="navigation">
+    <nav class="navbar  navbar-fixed-top" role="navigation" id="nav">
       
       
       <div id="logo"> 
@@ -67,7 +74,8 @@
 
       <!-- Menu  Login -->
       <div class="bs-example" id="menu_login">
-        <div class="navbar-header">
+        
+        <div class="navbar-header" id="mobile_login">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#login_area">
             <li>
               <span class="sr-only">Dispositivos Móveis</span>
@@ -91,15 +99,17 @@
         <li class="<%=  yield(:faq) %>"><%= link_to "FAQ", faq_path %></li>
         
         <li> <form class="navbar-form navbar-rigth" role="search" id="search">
-
-          <div class="input-group" id="imput_pesquisa">
-            <input class="form-control" type="text" placeholder="Pesquisar" />
+        
+        <!--
+        <div class="input-group" id="imput_pesquisa">
+          <input class="form-control" type="text" placeholder="Pesquisar" />
             <div class="input-group-btn">
-              <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-            </button>
+              <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </div>
+        </div>-->
 
-          </div>
-        </div>
       </form>
     </li>
 
@@ -122,19 +132,21 @@
 <div class="container" id="menuPrincipal">
 
   <div class="navbar-header" style="position: relative;" >
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <li>
-        <span class="sr-only">Dispositivos Móveis</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </li>  
-    </button>
-  </div>
+    
+    <div class="navbar-header" id="mobile_login">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <li>
+              <span class="sr-only">Dispositivos Móveis</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </li>  
+          </button>
+    </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
 
-  <div class="row hidden-xs">
+  
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav nav-pills " > 
         <!--<li class="<%=  yield(:fundacao) %>"><%= link_to "A Fundação", fundacao_path %></li>-->
@@ -173,22 +185,19 @@
           <li class="<%=  yield(:galeria_de_projetos) %>"><%= link_to "Galeria de Projetos", galeria_de_projetos_path %></li>
 
 
-          <li class="<%=  yield(:conveniar) %>"><%= link_to "Conveniar", conveniar_path %></li>
+          <!--<li class="<%=  yield(:conveniar) %>"><%= link_to "Conveniar", conveniar_path %></li>-->
 
           <!-- Menu conveniar -->
 
           <li class="dropdown">
-          <a href="" data-toggle="dropdown" class="dropdown-toggle" class="active">A Fundação<b class="caret"></b></a>
+          <a href="" data-toggle="dropdown" class="dropdown-toggle" class="active">Conveniar<b class="caret"></b></a>
+          
           <ul class="dropdown-menu" id="menu_drop" role="menu">
-            <li><a><%= link_to "Apoio a UFOP", apoio_path %> </a></li>
-            <li><a><%= link_to "Missão e Valores", missao_path %></a></li>
-            <li class="<%=  yield(:projetos) %>"><a><%= link_to "Projetos", projetos_path %></a></li>
-            <li><a><%= link_to "Palavra do Presidente", presidente_path %></a></li>
-            <li><a><%= link_to "Estatuto", estatuto_path %></a></li>
-            <li><a><%= link_to "Conselhos", conselhos_path %></a></li>
-            <li class="divider"></li>
-            <li><a><%= link_to "Emails e Ramais", emails_ramais_path %></a></li>
-            <li class="<%=  yield(:juridico) %>"><a><%= link_to "Jurídico", juridico_path %></a></li>
+
+            <li><a href="http://conveniar.feop.com.br:8081/pesquisador" target=”_blank”>Acesso do Pesquisador</a></li>
+            <li><a href="http://conveniar.feop.com.br:8081/fornecedor" target=”_blank”>Portal de Compras</a></li>
+            <li><a href="http://conveniar.feop.com.br:8081/eventos" target=”_blank”>Eventos</a></li>
+            <li class="<%=  yield(:conveniar) %>"><%= link_to "Sobre Conveniar", conveniar_path %></li>
           </ul>
         </li>
 
@@ -201,6 +210,12 @@
           <!--<li class="<%=  yield(:setores) %>"><%= link_to "Setores", setores_path %></li>-->
 
 
+
+
+          <li class="<%=  yield(:editais) %>"><%= link_to "Editais", editais_path %></li>
+
+          <li><a href="http://conveniar.feop.com.br:8081/eventos/" target=”_blank”>Eventos</a></li>
+          
           <li class="dropdown">
             <a href="" data-toggle="dropdown" class="dropdown-toggle">Setores<b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu" id="menu_drop">
@@ -214,11 +229,6 @@
               <li><%= link_to "Assessoria Jurídica", acessoria_path %></li>
             </ul>
           </li>
-
-
-          <li class="<%=  yield(:editais) %>"><%= link_to "Editais", editais_path %></li>
-
-          <li><a href="http://conveniar.feop.com.br:8081/eventos/" target=”_blank”>Eventos</a></li>
           <!--<li class="<%=  yield(:mapa_do_site) %>"><%= link_to "Mapa do Site", mapa_do_site_path %></li>-->
 
           <!--<li class="<%=  yield(:fale_conosco) %>"><%= link_to "Fale conosco", fale_conosco_path %></li>-->
@@ -230,7 +240,7 @@
       </div>
     </div>
     <!-- /.navbar-collapse -->
-  </div>
+  
   <!-- /.container -->
 
       <!-- navbar verde <nav class="navbar" id="submenu"></nav>--> 
@@ -254,19 +264,26 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
+            <li data-target="#myCarousel" data-slide-to="7"></li>
+            <li data-target="#myCarousel" data-slide-to="8"></li>
+
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-              <%= image_tag 'op1.jpg', size: '1920x101' %>
+              <%= image_tag 'fd01.jpg' %>
               <div class="carousel-caption">
                 <!--<h2>Caption 1</h2>-->
               </div>
             </div>
 
             <div class="item">
-              <%= image_tag 'op2.jpg', size: '1920x101' %>
+              <%= image_tag 'fd02.jpg', size: '1920x101' %>
               <div class="carousel-caption">
                 <!--<h2>Caption 2</h2>-->
               </div>
@@ -274,7 +291,66 @@
             
 
             <div class="item">
-              <%= image_tag 'op4.jpg', size: '1920x101' %>
+              <%= image_tag 'fd03.jpg', size: '1920x101' %>
+              <div class="carousel-caption">
+                <!--<h2>Caption 3</h2>-->
+              </div>
+            </div>
+
+            <div class="item ">
+              <%= image_tag 'fd04.jpg', size: '1920x101' %>
+              <div class="carousel-caption">
+                <!--<h2>Caption 1</h2>-->
+              </div>
+            </div>
+
+            <div class="item">
+              <%= image_tag 'fd05.jpg', size: '1920x101' %>
+              <div class="carousel-caption">
+                <!--<h2>Caption 2</h2>-->
+              </div>
+            </div>
+            
+
+            <div class="item">
+              <%= image_tag 'fd06.jpg', size: '1920x101' %>
+              <div class="carousel-caption">
+                <!--<h2>Caption 3</h2>-->
+              </div>
+            </div>
+
+            <div class="item">
+              <%= image_tag 'fd07.jpg', size: '1920x101' %>
+              <div class="carousel-caption">
+                <!--<h2>Caption 1</h2>-->
+              </div>
+            </div>
+
+            <div class="item">
+              <%= image_tag 'fd08.jpg', size: '1920x101' %>
+              <div class="carousel-caption">
+                <!--<h2>Caption 2</h2>-->
+              </div>
+            </div>
+            
+
+            <div class="item">
+              <%= image_tag 'fd09.jpg', size: '1920x101' %>
+              <div class="carousel-caption">
+                <!--<h2>Caption 3</h2>-->
+              </div>
+            </div>
+
+            <div class="item ">
+              <%= image_tag 'fd10.jpg', size: '1920x101' %>
+              <div class="carousel-caption">
+                <!--<h2>Caption 1</h2>-->
+              </div>
+            </div>
+            
+
+            <div class="item">
+              <%= image_tag 'fd12.jpg', size: '1920x101' %>
               <div class="carousel-caption">
                 <!--<h2>Caption 3</h2>-->
               </div>
@@ -298,9 +374,6 @@
     </div>
     
 
-
-
-
     
     
     <!-- jQuery -->
@@ -308,7 +381,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+    
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({
@@ -317,8 +390,10 @@
       "<i class='icon-chevron-right icon-white'>></i>"
     })
     </script>
-
     
+    <script>
+      $( '#nav li:has(ul)' ).doubleTapToGo();
+    </script>
 
 </body>
 </html>
